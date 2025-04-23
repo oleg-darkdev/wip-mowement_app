@@ -4,39 +4,91 @@
 	// import {  } from '$entities'
 </script>
 
-<section class="hero">
-	<div class="w-layout-grid hero-content-grid">
-		<h1 class="heading-5">
-			<!-- <span class='emoji'>🔥</span> -->
-			Tworzę angażujące , znaczące gry <span class="emoji">🧩</span> i animacje
-			<span class="emoji">🎉</span> dla moich klientów
-		</h1>
-		<div class="hero-text">
-			<p>
-				Tworzę od podstaw ⛳ gry terenowe i planszowe 🎲 - dla warsztatów, eventów, wycieczek, ngo,
-				muzeów i korporacji.
-			</p>
-
-			<p>
-				Od scenariusza po zasady gry i dystrybucję, mogę zarządzać każdym etapem tworzenia gry 🎁
-			</p>
-		</div>
-		<div class="secondary-button">
-			<a href="#contact" class="button-3 w-button">📱 Porozmawiajmy! </a>
-			<img src="images/right_arrow.svg" loading="lazy" alt="" class="image-22" />
+<section class="section_hero-header">
+	<div class="hero-header_slider-component">
+		<div class="slider-hero_list-wrapper swiper swiper-01">
+			<div class="slider-hero_list swiper-wrapper">
+				<div class="slider-hero_list-item swiper-slide">
+					<div class="w-dyn-list">
+						<div role="list" class="w-dyn-items">
+							<div role="listitem" class="w-dyn-item">
+								<div class="hero-header_slider-image-wrapper">
+									<img
+										src="images/banner.jpg"
+										alt=""
+										sizes="100vw"
+										class="hero-header_slider-image"
+									/>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
-	<div class="hero-img-wrapper">
-		<img
-			src="images/647a645e0e6afb2572d6dba9_Main%20illustration%20%281%29%201.png"
-			loading="lazy"
-			sizes="(max-width: 767px) 90vw, (max-width: 991px) 80vw, (max-width: 1439px) 47vw, 46vw"
-			srcset="images/647a645e0e6afb2572d6dba9_Main%20illustration%20%281%29%201-p-500.png 500w, images/647a645e0e6afb2572d6dba9_Main%20illustration%20%281%29%201-p-800.png 800w, images/647a645e0e6afb2572d6dba9_Main%20illustration%20%281%29%201-p-1080.png 1080w, images/647a645e0e6afb2572d6dba9_Main%20illustration%20%281%29%201-p-1600.png 1600w, images/647a645e0e6afb2572d6dba9_Main%20illustration%20%281%29%201-p-2000.png 2000w, images/647a645e0e6afb2572d6dba9_Main%20illustration%20%281%29%201-p-2600.png 2600w, images/647a645e0e6afb2572d6dba9_Main%20illustration%20%281%29%201.png 2731w"
-			alt="gamification expert"
-			class="hero-main-image"
-		/>
+	<div class="hero-header_info-grid">
+		<div class="banner-prew-slide-btn hero-header_info-grid-item">
+			<div class="button-prev-slide"></div>
+		</div>
+		<div class="hero-slider-info-block-wrap hero-header_info-grid-item">
+			<div class="w-dyn-list">
+				<div role="list" class="w-dyn-items">
+					<div role="listitem" class="w-dyn-item">
+						<div class="hero-header_info-content">
+							<div class="margin-bottom margin-xsmall">
+								<h1 class="heading-style-h4">Lorem Ipsum jest tekstem</h1>
+							</div>
+							<div class="margin-bottom margin-tiny">
+								<p class="text-size-medium">Został po raz pierwszy użyty w XV w.</p>
+							</div>
+							<div class="exhibition-date text-size-medium w-embed">
+								<p class="exhibition-date">13. Apr 2025 – 14. Sep 2025</p>
+							</div>
+							<div class="margin-top margin-medium">
+								<div class="button-group">
+									<a href="/" class="button is-secondary w-inline-block">
+										<div class="button-text">Lorem Ipsum</div>
+										<div class="button-background"></div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="banner-next-slide-btn hero-header_info-grid-item">
+			<div class="button-next-slide"></div>
+		</div>
 	</div>
 </section>
 
 <style lang="postcss">
+	.banner-next-slide-btn {
+		grid-area: span 1 / span 1 / span 1 / span 1;
+	}
+
+	.hero-slider-info-block-wrap {
+		grid-area: span 2 / span 1 / span 2 / span 1;
+	}
+
+	.banner-prew-slide-btn {
+		grid-area: span 1 / span 1 / span 1 / span 1;
+		justify-self: stretch;
+	}
+
+	@media screen and (max-width: 991px) {
+		.banner-next-slide-btn {
+			grid-area: 1/2/2/3;
+		}
+
+		.hero-slider-info-block-wrap {
+			grid-area: 2/1/3/3;
+		}
+
+		.banner-prew-slide-btn {
+			grid-area: 1/1/2/2;
+		}
+	}
 </style>

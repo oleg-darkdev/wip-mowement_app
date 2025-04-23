@@ -4,11 +4,7 @@
 	// import {  } from '$entities'
 </script>
 
-<footer class="background-color-gray fixed bottom-0 left-0  w-full">
-	<div class="mx-auto w-full max-w-4xl pb-6">
-		<slot />
-	</div>
-</footer>
+<div id="mapa" class="h-screen w-full bg-black"></div>
 
 <style lang="postcss">
 </style>
