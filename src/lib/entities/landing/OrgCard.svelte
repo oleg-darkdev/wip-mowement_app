@@ -12,7 +12,7 @@
 			<h3 class="heading-style-h6"><span class='mr-4'>{id}.</span> {abbr}</h3>
 			<div class="text-size-medium w-embed">
 				<p class="">
-					<em>{title}</em> <strong>({localisation})</strong>
+					<em>{title}</em> <strong>{localisation}</strong>
 				</p>
 			</div>
 		</div>

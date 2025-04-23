@@ -3804,6 +3804,12 @@ figcaption {
 	padding: 1rem;
 }
 @media screen and (max-width: 991px) {
+	.legal_item {
+	grid-template-columns: 1fr;
+
+	}
+
+
 	h1 {
 		font-size: 3.25rem;
 	}

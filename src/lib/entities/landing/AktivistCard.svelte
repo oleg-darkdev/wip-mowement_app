@@ -21,7 +21,7 @@
 		</div>
 
 		<div class="flex w-full flex-col content-start items-start justify-start pr-4">
-			<p class="text-size-medium mb-2 mb-6 h-20 max-w-[350px] truncate">
+			<p class="text-size-medium mb-2 mb-6 h-auto max-w-[350px] truncate">
 				{shortDesc}
 			</p>
 

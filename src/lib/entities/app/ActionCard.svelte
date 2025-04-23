@@ -5,8 +5,6 @@
 </script>
 
 <div role="listitem" class=" w-dyn-item">
-	<!-- 		href={link}
-		target="_blank" -->
 	<div style="background-color:rgba(0,0,0,0)" class="riot-list_link-block w-inline-block w-full">
 		<div class="">
 			<div class="riot-list_link-block-content">

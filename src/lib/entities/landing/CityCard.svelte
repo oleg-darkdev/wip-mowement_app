@@ -39,8 +39,6 @@
 					<SummaryActionsMiniCard title="1992" actions={actions_1992} />
 				</div>
 			</div>
-
-			
 		</div>
 		<div class="legal_item-content">
 			<div role="region" class="flex flex-col">
@@ -57,7 +55,7 @@
 					</ul>
 				</div>
 			</div>
-			
+
 			<div>
 				{shortDesc}
 			</div>

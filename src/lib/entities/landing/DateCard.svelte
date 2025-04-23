@@ -10,7 +10,7 @@
 	<!-- 		href={link}
 		target="_blank" -->
 	<div style="background-color:rgba(0,0,0,0)" class="riot-list_link-block w-inline-block w-full">
-		<div class="riot-list_link-block-content mr-4 w-4/12">
+		<div class="riot-list_link-block-content mr-4 lg:w-4/12">
 			<div class="margin-bottom margin-xxsmall">
 				<h4 class="riot-list_link-text"><span class="mr-4"><em>{id}.</em></span>{title}</h4>
 			</div>
@@ -24,7 +24,7 @@
 		</div>
 
 		<!-- col-span-2  -->
-		<div class="flex w-6/12 w-full flex-col content-start items-start justify-start pr-4 pt-7">
+		<div class="flex lg:w-6/12 w-full flex-col content-start items-start justify-start pr-4 lg:pt-7 pt-2">
 			<p class="text-size-medium mb-2">
 				{shortDesc}
 			</p>
@@ -40,7 +40,7 @@
 				</div>
 			{/if}
 
-			<button onclick={() => (showAction = !showAction)} class="button is-secondary mt-8"
+			<button onclick={() => (showAction = !showAction)} class="button is-secondary lg:mt-8 mt-4"
 				><div class="button-text">{showAction ? 'Mniej' : 'Więcej'} info</div>
 				<div class="button-background"></div>
 			</button>
@@ -50,7 +50,7 @@
 
 		<!-- </div> -->
 		<!-- on mobile flex-column - on decstop flex-row -->
-		<div class="riot-list_image-slider-wrapper pointer-events-off max-w-sm">
+		<!-- <div class="riot-list_image-slider-wrapper pointer-events-off max-w-sm">
 			<div class="riot-list_link-image">
 				<img
 					src="/images/about_2.jpg"
@@ -59,10 +59,8 @@
 					sizes="100vw"
 					class=" riot-list_image"
 				/>
-				<!-- images/logo-dark.svg -->
-				<!--  -->
 			</div>
-		</div>
+		</div> -->
 	</div>
 </div>
 
