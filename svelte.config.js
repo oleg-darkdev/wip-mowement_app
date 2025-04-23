@@ -28,7 +28,8 @@ const config = {
 			$sharedData: 'src/lib/shared/data',
 			$sharedStores: 'src/lib/shared/stores',
 			$sharedUtils: 'src/lib/shared/utils',
-			$sharedTypes: 'src/lib/shared/types'
+			$sharedTypes: 'src/lib/shared/types',
+			$stores: 'src/lib/shared/stores'
 		}
 	},
 	compilerOptions: {
