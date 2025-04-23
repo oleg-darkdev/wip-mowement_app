@@ -35,7 +35,7 @@
 	<!-- {#if $selectedMenu} -->
 	<Header />
 	<!-- 94vh -->
-	<main class="flex h-[68vh] flex-col items-center overflow-x-hidden">
+	<main class="flex h-[68vh] flex-col items-center content-center overflow-x-hidden">
 		<!-- content-center items-center  -->
 		{#if $selectedMenu == 0}
 			<WelcomeScreen />

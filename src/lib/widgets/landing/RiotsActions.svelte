@@ -6,7 +6,7 @@
 	let { showFullList } = $state(false);
 </script>
 
-<section id={anchor} class="tab_component w-tabs">
+<section id={anchor} class="tab_component w-tabs mb-4">
 	<div class="tab_tabs-content w-tab-content">
 		<div class="tab_tab-pane">
 			<div class="w-layout-grid tab_content-component exhebitions">

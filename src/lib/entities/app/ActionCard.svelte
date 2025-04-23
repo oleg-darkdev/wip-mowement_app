@@ -6,7 +6,7 @@
 
 <div role="listitem" class=" w-dyn-item">
 	<div style="background-color:rgba(0,0,0,0)" class="riot-list_link-block w-inline-block w-full">
-		<div class="">
+		<div class="l">
 			<div class="riot-list_link-block-content">
 				<div class="margin-bottom margin-xxsmall">
 					<h4 class="riot-list_link-text"><span class="mr-4">{id}.</span>{title}</h4>

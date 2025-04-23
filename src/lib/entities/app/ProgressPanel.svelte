@@ -18,7 +18,7 @@
 			</div>
 			<div class="tab_item-content">
 				<div>
-					progres <span>{progress}</span> /
+					<span class="hidden-sm"> progres </span><span>{progress}</span> /
 					<span>{finalStep}</span>
 				</div>
 			</div>
@@ -27,4 +27,7 @@
 </ul>
 
 <style lang="postcss">
+	.tab_item {
+		
+	}
 </style>

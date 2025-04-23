@@ -23,7 +23,7 @@
 
 <div role="listitem" class=" w-dyn-item legal_list-item">
 	<div style="background-color:rgba(0,0,0,0)" role="region" class="legal_item w-full">
-		<div class="legal_item-title">
+		<div class="">
 			<h3 class="heading-style-h6"><span class="mr-4">{id}.</span> {localisation}</h3>
 			<div class="text-size-medium w-embed">
 				<div class="flex flex-row flex-wrap">
@@ -53,10 +53,10 @@
 				</div>
 			</div>
 		</div>
-		<div class="legal_item-content mt-6">
-			<div>
+		<div class=" lg:mt-6">
+			<p>
 				{shortDesc}
-			</div>
+			</p>
 		</div>
 	</div>
 </div>
@@ -131,6 +131,10 @@
 		}
 		.riot-list_link-block {
 			flex-wrap: wrap;
+		}
+
+		.legal_item {
+			grid-template-columns: 1fr;
 		}
 	}
 

@@ -84,7 +84,8 @@
 		}
 
 		.hero-slider-info-block-wrap {
-			grid-area: 2/1/3/3;
+			/* grid-area: 2/1/3/3; */
+			display: none;
 		}
 
 		.banner-prew-slide-btn {

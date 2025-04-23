@@ -3803,12 +3803,17 @@ figcaption {
 .locales-empty {
 	padding: 1rem;
 }
+
+@media screen and (max-width: 991px) {
+	.hidden-sm {
+		display: none;
+	}
+}
+
 @media screen and (max-width: 991px) {
 	.legal_item {
-	grid-template-columns: 1fr;
-
+		grid-template-columns: 1fr;
 	}
-
 
 	h1 {
 		font-size: 3.25rem;
@@ -4577,7 +4582,6 @@ figcaption {
 		margin-left: -2rem;
 	}
 }
-
 
 @font-face {
 	font-family: 'TT Commons Pro';

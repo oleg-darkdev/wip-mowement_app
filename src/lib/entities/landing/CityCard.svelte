@@ -25,7 +25,7 @@
 
 <li id={anchor} class="legal_list-item">
 	<div role="region" class="legal_item">
-		<div class="legal_item-title">
+		<div class="">
 			<h3 class="heading-style-h6"><span class="mr-4">{id}.</span> {localisation}</h3>
 			<div class="text-size-medium w-embed">
 				<div class="flex flex-row flex-wrap">
@@ -40,7 +40,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="legal_item-content">
+		<div class="">
 			<div role="region" class="flex flex-col">
 				<div class="tab_item-title mr-6">
 					<p class="">Aktywne grupy:</p>
