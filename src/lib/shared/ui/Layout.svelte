@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Header, Footer } from '$widgetsLanding';
+	// import {  } from '$widgetsLanding';
 	import { } from '$sharedData';
 	import '../../../app/app.css';
 
@@ -7,13 +7,12 @@
 </script>
 
 <div class="page-wrapper">
-	<Header />
-
-	<main>
+	
+	<main class="main-wrapper">
 		{@render children()}
 	</main>
 
-	<Footer />
+	
 </div>
 
 <style lang="postcss">
