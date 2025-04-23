@@ -1,39 +1,40 @@
 const navigation = [
 	{
-		text: 'O mnie',
-		link: '#about'
-	},
-	{
-		text: 'Lista projektów',
-		link: '#progects'
-	},
-		{
-		text: 'Jak?',
-		link: '#how'
-	},
-	
-	{
-		text: 'Dla kogo?',
-		link: '#whom'
+		text: 'O ruchu',
+		link: '#o-ruchu'
 	},
 
+	{
+		text: 'Akcji',
+		link: '#akcji-oporu'
+	},
+	{
+		text: 'Organizacje',
+		link: '#organizacje'
+	},
+	{
+		text: 'Uczestniki',
+		link: '#uczestniki'
+	},
 
 	{
-		text: 'Misja',
-		link: '#mission'
+		text: 'Miasta',
+		link: '#miasta'
 	},
-	// {
-	// 	text: 'Lorem Ipsum',
-	// 	link: '/'
-	// },
+
+	{
+		text: 'Mapa',
+		link: '#mapa'
+	},
+
 	{
 		text: 'F.A.Q.',
 		link: '#faq'
+	},
+	{
+		text: 'Kontakt',
+		link: '#kontakt'
 	}
-	// {
-	// 	text: 'Kontakt',
-	// 	link: '#contact'
-	// }
 ];
 
 export default navigation;
