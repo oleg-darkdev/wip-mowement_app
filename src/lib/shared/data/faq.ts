@@ -1,56 +1,53 @@
 const faq = [
 	{
-		q: 'Jakie gry tworzysz',
+		q: 'Lorem Ipsum jest tekstem stosowanym jako',
 		a: [
-			`Tworzę od podstaw gry terenowe i planszowe na potrzeby warsztatów, eventów, wycieczek, muzeów i firm.`,
-			`Zarządzam całym procesem – od scenariusza po zasady gry i dystrybucję.`
+			`Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym. Spopularyzował się w latach 60.`,
+			`XX w. wraz z publikacją arkuszy Letrasetu, zawierających fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym do realizacji druków na komputerach osobistych, jak Aldus PageMaker.`
 		]
 	},
 	{
-		q: 'Dla kogo są przeznaczone Twoje usługi',
+		q: 'Lorem Ipsum jest tekstem stosowanym jako',
 		a: [
-			`Współpracuję z muzeami, firmami, instytucjami edukacyjnymi, ośrodkami turystycznymi i organizatorami wydarzeń, pomagając im angażować uczestników za pomocą gier i animacji.`
+			`Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym. Spopularyzował się w latach 60.`,
+			`XX w. wraz z publikacją arkuszy Letrasetu, zawierających fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym do realizacji druków na komputerach osobistych, jak Aldus PageMaker.`
 		]
 	},
 	{
-		q: 'Czy mogę liczyć na wsparcie po wdrożeniu gry',
+		q: 'Lorem Ipsum jest tekstem stosowanym jako',
 		a: [
-			`Oczywiście! 🥳`,
-			`Pomagam w modyfikacji i rozwoju wdrożonych rozwiązań, aby jak najlepiej odpowiadały Twoim potrzebom.`
+			`Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym. Spopularyzował się w latach 60.`,
+			`XX w. wraz z publikacją arkuszy Letrasetu, zawierających fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym do realizacji druków na komputerach osobistych, jak Aldus PageMaker.`
 		]
 	},
 	{
-		q: 'Czy mogę zamówić gotowe rozwiązanie',
+		q: 'Lorem Ipsum jest tekstem stosowanym jako',
 		a: [
-			`Tak! 🤩`,
-			`Możesz skorzystać z gotowych scenariuszy i gier lub zamówić personalizowaną wersję dostosowaną do Twoich potrzeb.`
+			`Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym. Spopularyzował się w latach 60.`,
+			`XX w. wraz z publikacją arkuszy Letrasetu, zawierających fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym do realizacji druków na komputerach osobistych, jak Aldus PageMaker.`
 		]
 	},
 	{
-		q: 'Jakie formaty gier oferujesz',
+		q: 'Lorem Ipsum jest tekstem stosowanym jako',
 		a: [
-			`Oferuję gry terenowe, planszowe, questy, aktywności sportowe oraz interaktywne animacje.`,
-			`Możemy stworzyć unikalną grę na potrzeby Twojego wydarzenia lub dostosować gotowe rozwiązania.`
+			`Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym. Spopularyzował się w latach 60.`,
+			`XX w. wraz z publikacją arkuszy Letrasetu, zawierających fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym do realizacji druków na komputerach osobistych, jak Aldus PageMaker.`
 		]
 	},
 	{
-		q: 'Czy mogę zamówić grę w kilku językach',
+		q: 'Lorem Ipsum jest tekstem stosowanym jako',
 		a: [
-			`Oczywiście! 🥳`,
-			`Mogę przygotować grę w wybranych językach, aby dopasować ją do międzynarodowych uczestników.`
+			`Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym. Spopularyzował się w latach 60.`,
+			`XX w. wraz z publikacją arkuszy Letrasetu, zawierających fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym do realizacji druków na komputerach osobistych, jak Aldus PageMaker.`
 		]
 	},
 	{
-		q: 'Czy oferujesz animacje na eventy',
+		q: 'Lorem Ipsum jest tekstem stosowanym jako',
 		a: [
-			`Tak! 🌿`,
-			`Tworzę interaktywne animacje, które angażują uczestników i sprawiają, że wydarzenia są jeszcze ciekawsze.`
+			`Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym. Spopularyzował się w latach 60.`,
+			`XX w. wraz z publikacją arkuszy Letrasetu, zawierających fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym do realizacji druków na komputerach osobistych, jak Aldus PageMaker.`
 		]
 	}
-	// {
-	// 	q: '',
-	// 	a: [``, ``, ``]
-	// },
 	// {
 	// 	q: '',
 	// 	a: [``, ``, ``]
