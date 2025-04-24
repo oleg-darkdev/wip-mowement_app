@@ -8,7 +8,7 @@
 	<div class="mx-auto max-w-2xl">
 		<h2 class="heading-style-medium text-center">
 			<!-- Zebrane: -->
-			0 <span><img src="/images/dove-icon_black.svg" class="-ml-6 h-20 w-14 pb-2" alt="" /></span>
+			0 <span><img src="/images/dove-icon_black.svg" class="lg:-ml-6 -ml-2 lg:h-20 lg:w-14 h-10 w-6 pb-2" alt="" /></span>
 		</h2>
 	</div>
 </header>
