@@ -4,7 +4,7 @@
 	// import { ProgressPanel } from '$entitiesApp';
 </script>
 
-<section class="flex h-full max-w-2xl content-center items-center overflow-hidden">
+<section class="flex h-full w-full max-w-2xl content-center items-center overflow-hidden">
 	<div transition:slide class="h-full w-full px-4">
 		<slot />
 	</div>

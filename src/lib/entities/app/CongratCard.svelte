@@ -39,7 +39,7 @@
 			</div>
 		</h3>
 
-		<div class="flex w-full max-w-sm flex-row justify-between">
+		<div class="flex w-full max-w-sm flex-row justify-around">
 			<button onclick={() => ($selectedMenu = 0)} class="button is-secondary"
 				><div class="button-text">Menu</div>
 				<div class="button-background"></div>

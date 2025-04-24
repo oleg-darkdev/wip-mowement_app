@@ -6,7 +6,7 @@
 
 <li class="tab_list-item w-full">
 	<div class="flex w-full flex-row justify-between">
-		<div role="region" class="tab_item w-full">
+		<div role="region" class="menu_item w-full">
 			<div class="tab_item-title">
 				<h4 class="heading-style-h6">{mode.title}</h4>
 			</div>
@@ -33,4 +33,24 @@
 </li>
 
 <style lang="postcss">
+	.menu_item {
+		border-top: 2px solid var(--black);
+		border-right: 2px solid var(--black);
+		border-left: 2px solid var(--black);
+		text-align: left;
+		justify-content: space-between;
+		padding: 1rem;
+		display: flex;
+	}
+
+	@media screen and (max-width: 479px) {
+		.menu_item {
+			justify-content: justify-between;
+			padding: 1rem;
+			align-items: flex-start;
+			align-content: flex-start;
+			display: flex;
+			flex-direction: row;
+		}
+	}
 </style>
