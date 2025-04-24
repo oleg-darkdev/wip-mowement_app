@@ -167,7 +167,7 @@ const ch77 = {
 
 const fpmb = {
 	title: 'Pokój i Prawa Człowieka (Friedens- und Menschenrechtsbewegung)',
-	localisation: ['Berlin (Wschodni)'],
+	localisation: ['Berlin'],
 	longitude: '13.4050',
 	latitude: '52.5200',
 	abbr: 'FPMB',
@@ -235,10 +235,10 @@ const dzzsr = {
 	]
 };
 
-const localOrgs = [nsz, aro, fmw, rsa, rsz, twe];
+let localOrgs = [nsz, aro, fmw, rsa, rsz, twe];
 
-const worldwideOrgs = [ch77, fpmb, wod, dzzsr];
+let worldwideOrgs = [ch77, fpmb, wod, dzzsr];
 
-const allOrgs = [].concat(localOrgs, worldwideOrgs);
+const allOrgs = [nsz, aro, fmw, rsa, rsz, twe, ch77, fpmb, wod, dzzsr];
 
 export { localOrgs, worldwideOrgs, allOrgs, nsz, aro, fmw, rsa, rsz, twe, ch77, fpmb, wod, dzzsr };
