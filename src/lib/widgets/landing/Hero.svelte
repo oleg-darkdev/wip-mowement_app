@@ -1,6 +1,5 @@
 <script lang="ts">
-	// import {  } from '$shared';
-	// import {  } from '$widgets';
+	import { NextStepBtnLanding, PrevStepBtnLanding } from '$sharedUi'; // import {  } from '$widgets';
 	// import {  } from '$entities'
 </script>
 
@@ -28,9 +27,8 @@
 		</div>
 	</div>
 	<div class="hero-header_info-grid">
-		<div class="banner-prew-slide-btn hero-header_info-grid-item">
-			<div class="button-prev-slide"></div>
-		</div>
+		<PrevStepBtnLanding />
+
 		<div class="hero-slider-info-block-wrap hero-header_info-grid-item">
 			<div class="w-dyn-list">
 				<div role="list" class="w-dyn-items">
@@ -58,38 +56,29 @@
 				</div>
 			</div>
 		</div>
-		<div class="banner-next-slide-btn hero-header_info-grid-item">
-			<div class="button-next-slide"></div>
-		</div>
+		<NextStepBtnLanding />
 	</div>
 </section>
 
 <style lang="postcss">
-	.banner-next-slide-btn {
-		grid-area: span 1 / span 1 / span 1 / span 1;
-	}
-
 	.hero-slider-info-block-wrap {
 		grid-area: span 2 / span 1 / span 2 / span 1;
 	}
-
-	.banner-prew-slide-btn {
-		grid-area: span 1 / span 1 / span 1 / span 1;
-		justify-self: stretch;
+	.hero-header_info-grid-item {
+		border-top: 2px solid var(--black);
+		border-right: 2px solid var(--black);
 	}
 
 	@media screen and (max-width: 991px) {
-		.banner-next-slide-btn {
-			grid-area: 1/2/2/3;
+		.hero-header_info-grid-item {
+			background-color: var(--white);
+			border-top-width: 0;
+			border-right-width: 0;
 		}
 
 		.hero-slider-info-block-wrap {
 			/* grid-area: 2/1/3/3; */
 			display: none;
-		}
-
-		.banner-prew-slide-btn {
-			grid-area: 1/1/2/2;
 		}
 	}
 </style>
