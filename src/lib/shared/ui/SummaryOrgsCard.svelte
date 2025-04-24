@@ -1,11 +1,13 @@
 <script lang="ts">
+	import { slide } from 'svelte/transition';
+
 	let { orgs, text } = $props();
 </script>
 
-<li class="tab_list-item">
+<li transition:slide class="tab_list-item">
 	<div role="region" class="tab_item">
 		<div class="tab_item-title mr-6">
-			<h4 class="heading-style-h6 mb-2">Sojusznicy <br  class='hidden-sm'/> {text}:</h4>
+			<h4 class="heading-style-h6 mb-2">Sojusznicy <br class="hidden-sm" /> {text}:</h4>
 		</div>
 		<div class="tab_item-content">
 			<ul role="list" class="opening-times_list">

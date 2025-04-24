@@ -1,10 +1,12 @@
 <script lang="ts">
 	import { selectedAppMode, stepInstruction } from '$stores/app';
 
-	const prevStep = () => {
-		$stepInstruction--;
-		$selectedAppMode.progress--;
-	};
+	// const prevStep = () => {
+	// 	$stepInstruction--;
+	// 	$selectedAppMode.progress--;
+	// };
+
+	let { prevStep } = $props();
 </script>
 
 <button onclick={prevStep} class="button is-icon is-secondary mt-8">

@@ -1,10 +1,12 @@
 <script lang="ts">
 	import { selectedAppMode, stepInstruction } from '$stores/app';
 
-	const nextStep = () => {
-		$stepInstruction++;
-		$selectedAppMode.progress++;
-	};
+	// const nextStep = () => {
+	// 	$stepInstruction++;
+	// 	$selectedAppMode.progress++;
+	// };
+
+	let { nextStep } = $props();
 </script>
 
 <button onclick={nextStep} class="button is-icon is-primary mt-8"

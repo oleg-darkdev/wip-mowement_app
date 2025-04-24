@@ -1,14 +1,16 @@
 <script lang="ts">
+	import { slide } from 'svelte/transition';
+
 	import { actionsCounter } from '$sharedData';
 </script>
 
-<li class="tab_list-item">
+<li transition:slide class="tab_list-item">
 	<div role="region" class="tab_item">
 		<div class="tab_item-title">
 			<h4 class="heading-style-h6">Akcji:</h4>
 		</div>
-		<div class="tab_item-content lg:pl-16 md:pl-8 pl-4">
-			<ul role="list" class="opening-times_list flex flex-row flex-wrap justify-between ">
+		<div class="tab_item-content pl-4 md:pl-8 lg:pl-16">
+			<ul role="list" class="opening-times_list flex flex-row flex-wrap justify-between">
 				<!-- opening-times_list -->
 				<!-- title -->
 				<!-- add countup.js -->
