@@ -3,8 +3,8 @@
 	import { slide } from 'svelte/transition';
 
 	import {
-		NextStepBtn,
-		PrevStepBtn,
+		NextStepBtnApp,
+		PrevStepBtnApp,
 		BackMenuBtn,
 		PlayBtn,
 		ShopBtn,
@@ -35,7 +35,7 @@
 	<!-- {#if $selectedMenu} -->
 	<Header />
 	<!-- 94vh -->
-	<main class="flex h-[68vh] flex-col items-center content-center overflow-x-hidden">
+	<main class="flex h-[68vh] flex-col content-center items-center overflow-x-hidden">
 		<!-- content-center items-center  -->
 		{#if $selectedMenu == 0}
 			<WelcomeScreen />
@@ -72,7 +72,7 @@
 											{actions_1992}
 											{shortDesc}
 											{link}
-											{id}
+											{index}
 											{localisation}
 										/>
 									</div>
@@ -82,7 +82,7 @@
 					</div>
 				{:else if $selectedPlayMenu == 3}
 					<div class="mt-4">
-						{#each $selectedAppMode.data as { firstName, lastName, shortDesc, photo, wikiLink, birthDate, deathDate, desc, id }, index (id)}
+						{#each $selectedAppMode.data as { firstName, lastName, prisonTime, sanction, shortDesc, photo, wikiLink, birthDate, deathDate, desc, id }, index (id)}
 							{#if $selectedLevelData == index}
 								<div transition:slide class="archive_list-wrapper w-dyn-list">
 									<div role="list" class="archive_list w-dyn-items">
@@ -93,7 +93,9 @@
 											{photo}
 											{wikiLink}
 											{birthDate}
+											{sanction}
 											{deathDate}
+											{prisonTime}
 											{desc}
 											{index}
 										/>
@@ -112,7 +114,7 @@
 											{title}
 											{desc}
 											{groups}
-											{id}
+											{index}
 											{actions_1985}
 											{actions_1986}
 											{actions_1987}
@@ -135,7 +137,7 @@
 							{#if $selectedLevelData == index}
 								<div transition:slide class="archive_list-wrapper w-dyn-list">
 									<div role="list" class="archive_list w-dyn-items">
-										<ActionCard {desc} {title} {date} {shortDesc} {link} {id} {localisation} />
+										<ActionCard {desc} {title} {date} {shortDesc} {link} {index} {localisation} />
 									</div>
 								</div>
 							{/if}
@@ -154,11 +156,14 @@
 				<BackMenuBtn />
 
 				{#if $selectedMenu == 1}
-					<div class="grid grid-cols-2 gap-x-8 px-4">
+					<div class="ml-10 grid grid-cols-2 gap-x-8 px-4">
 						{#if $selectedAppMode.progress > 0}
-							<PrevStepBtn />
+							<PrevStepBtnApp />
 						{/if}
-						<NextStepBtn />
+
+						{#if $selectedAppMode.progress != $selectedAppMode.data.length}
+							<NextStepBtnApp />
+						{/if}
 					</div>
 				{/if}
 

@@ -7,8 +7,8 @@
 		<div class="tab_item-title">
 			<h4 class="heading-style-h6">Akcji:</h4>
 		</div>
-		<div class="tab_item-content pl-8">
-			<ul role="list" class="opening-times_list flex flex-row flex-wrap justify-between lg:pl-8">
+		<div class="tab_item-content lg:pl-16 md:pl-8 pl-4">
+			<ul role="list" class="opening-times_list flex flex-row flex-wrap justify-between ">
 				<!-- opening-times_list -->
 				<!-- title -->
 				<!-- add countup.js -->
