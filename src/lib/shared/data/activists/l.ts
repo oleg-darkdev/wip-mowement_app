@@ -16,6 +16,8 @@ const l = {
 			],
 			wikiLink: 'https://pl.wikipedia.org/wiki/Jan_J%C3%B3zef_Lipski',
 			birthDate: '25 maja 1926',
+			prisonTime: 0,
+			sanction: 0,
 			deathDate: '10 września 1991'
 		}
 	]

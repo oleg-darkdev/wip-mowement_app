@@ -11,6 +11,8 @@ const n = {
 			desc: [{ title: '', text: '' }],
 			wikiLink: 'https://pl.wikipedia.org/wiki/Piotr_Niemczyk',
 			birthDate: '18 czerwca 1962',
+			prisonTime: 0,
+			sanction: 0,
 			deathDate: ''
 		}
 	]

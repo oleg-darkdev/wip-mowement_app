@@ -11,6 +11,8 @@ const r = {
 			desc: [{ title: '', text: '' }],
 			wikiLink: 'https://pl.wikipedia.org/wiki/Konstanty_Radziwi%C5%82%C5%82_(ur._1958)',
 			birthDate: '9 stycznia 1958',
+			prisonTime: 0,
+			sanction: 0,
 			deathDate: ''
 		},
 		{
@@ -22,6 +24,8 @@ const r = {
 			desc: [{ title: '', text: '' }],
 			wikiLink: 'https://pl.wikipedia.org/wiki/Jan_Rojek',
 			birthDate: '17 marca 1962',
+			prisonTime: 0,
+			sanction: 0,
 			deathDate: '16 lipca 2011'
 		},
 		{
@@ -34,6 +38,8 @@ const r = {
 			desc: [{ title: '', text: '' }],
 			wikiLink: 'https://pl.wikipedia.org/wiki/Jan_Rokita',
 			birthDate: '18 czerwca 1959',
+			prisonTime: 0,
+			sanction: 0,
 			deathDate: ''
 		},
 		{
@@ -46,6 +52,8 @@ const r = {
 			desc: [{ title: '', text: '' }],
 			wikiLink: 'https://pl.wikipedia.org/wiki/Agnieszka_Romaszewska-Guzy',
 			birthDate: '15 stycznia 1962',
+			prisonTime: 0,
+			sanction: 0,
 			deathDate: ''
 		},
 		{
@@ -57,6 +65,8 @@ const r = {
 			desc: [{ title: '', text: '' }],
 			wikiLink: 'https://pl.wikipedia.org/wiki/Marek_Rusakiewicz',
 			birthDate: '15 czerwca 1964',
+			prisonTime: 0,
+			sanction: 0,
 			deathDate: ''
 		}
 	]

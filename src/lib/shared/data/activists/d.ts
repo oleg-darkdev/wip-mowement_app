@@ -15,6 +15,8 @@ const d = {
 			],
 			wikiLink: 'https://pl.wikipedia.org/wiki/Zuzanna_D%C4%85browska',
 			birthDate: '2 lutego 1966',
+			prisonTime: 0,
+			sanction: 0,
 			deathDate: ''
 		},
 		{
@@ -32,6 +34,8 @@ const d = {
 			],
 			wikiLink: 'https://pl.wikipedia.org/wiki/Jaros%C5%82aw_Dubiel',
 			birthDate: '17 września 1954',
+			prisonTime: 0,
+			sanction: 0,
 			deathDate: ''
 		},
 		{
@@ -49,6 +53,8 @@ const d = {
 			],
 			wikiLink: 'https://pl.wikipedia.org/wiki/Tomasz_Duklanowski',
 			birthDate: '1972',
+			prisonTime: 0,
+			sanction: 0,
 			deathDate: ''
 		}
 	]

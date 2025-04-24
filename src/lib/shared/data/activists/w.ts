@@ -11,6 +11,8 @@ const w = {
 			desc: [{ title: '', text: '' }],
 			wikiLink: 'https://pl.wikipedia.org/wiki/Tomasz_Wacko',
 			birthDate: '1958',
+			prisonTime: 0,
+			sanction: 0,
 			deathDate: '5 czerwca 2003'
 		},
 		{
@@ -23,6 +25,8 @@ const w = {
 			desc: [{ title: '', text: '' }],
 			wikiLink: 'https://pl.wikipedia.org/wiki/Miros%C5%82aw_Witkowski',
 			birthDate: '24 marca 1955',
+			prisonTime: 0,
+			sanction: 0,
 			deathDate: ''
 		}
 	]

@@ -16,6 +16,8 @@ const i = {
 			],
 			wikiLink: 'https://pl.wikipedia.org/wiki/Piotr_Ikonowicz',
 			birthDate: '14 maja 1956',
+			prisonTime: 0,
+			sanction: 0,
 			deathDate: ''
 		},
 		{
@@ -32,6 +34,8 @@ const i = {
 			],
 			wikiLink: 'https://pl.wikipedia.org/wiki/Grzegorz_Ilka',
 			birthDate: '26 kwietnia 1963',
+			prisonTime: 0,
+			sanction: 0,
 			deathDate: '16 marca 2019'
 		}
 	]

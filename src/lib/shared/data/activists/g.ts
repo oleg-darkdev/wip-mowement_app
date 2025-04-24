@@ -15,6 +15,8 @@ const g = {
 			],
 			wikiLink: 'https://pl.wikipedia.org/wiki/Rados%C5%82aw_Gawlik',
 			birthDate: '23 sierpnia 1957',
+			prisonTime: 0,
+			sanction: 0,
 			deathDate: ''
 		},
 		{
@@ -32,6 +34,8 @@ const g = {
 			],
 			wikiLink: 'https://pl.wikipedia.org/wiki/Stanis%C5%82aw_Gaw%C5%82owski',
 			birthDate: '27 listopada 1968',
+			prisonTime: 0,
+			sanction: 0,
 			deathDate: ''
 		},
 		{
@@ -48,6 +52,8 @@ const g = {
 			],
 			wikiLink: 'https://pl.wikipedia.org/wiki/Piotr_Gociek',
 			birthDate: '25 sierpnia 1969',
+			prisonTime: 0,
+			sanction: 0,
 			deathDate: ''
 		},
 		{
@@ -64,6 +70,8 @@ const g = {
 			],
 			wikiLink: 'https://pl.wikipedia.org/wiki/Ma%C5%82gorzata_Gorczewska',
 			birthDate: '13 października 1965',
+			prisonTime: 0,
+			sanction: 0,
 			deathDate: ''
 		}
 	],

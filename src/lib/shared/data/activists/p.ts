@@ -11,6 +11,8 @@ const p = {
 			desc: [{ title: '', text: '' }],
 			wikiLink: 'https://pl.wikipedia.org/wiki/Andrzej_Papierz',
 			birthDate: '21 listopada 1966',
+			prisonTime: 0,
+			sanction: 0,
 			deathDate: ''
 		},
 		{
@@ -23,6 +25,8 @@ const p = {
 			desc: [{ title: '', text: '' }],
 			wikiLink: 'https://pl.wikipedia.org/wiki/Lech_Parell',
 			birthDate: '2 maja 1967',
+			prisonTime: 0,
+			sanction: 0,
 			deathDate: ''
 		},
 		{
@@ -34,6 +38,8 @@ const p = {
 			desc: [{ title: '', text: '' }],
 			wikiLink: 'https://pl.wikipedia.org/wiki/Jacek_Podsiad%C5%82o',
 			birthDate: '7 lutego 1964',
+			prisonTime: 0,
+			sanction: 0,
 			deathDate: ''
 		}
 	]

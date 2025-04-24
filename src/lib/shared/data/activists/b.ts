@@ -16,6 +16,8 @@ const b = {
 			],
 			wikiLink: 'https://pl.wikipedia.org/wiki/Marek_Bik',
 			birthDate: '21 stycznia 1962',
+			prisonTime: 0,
+			sanction: 0,
 			deathDate: ''
 		},
 		{
@@ -32,6 +34,8 @@ const b = {
 			],
 			wikiLink: 'https://pl.wikipedia.org/wiki/Leszek_Budrewicz',
 			birthDate: '3 sierpnia 1956',
+			prisonTime: 0,
+			sanction: 0,
 			deathDate: ''
 		}
 	]

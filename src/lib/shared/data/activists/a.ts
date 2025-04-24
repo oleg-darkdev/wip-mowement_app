@@ -16,6 +16,8 @@ const a = {
 			],
 			wikiLink: 'https://pl.wikipedia.org/wiki/Marek_Adamkiewicz',
 			birthDate: '21 list. 1957',
+			prisonTime: 0,
+			sanction: 0,
 			deathDate: ''
 		}
 	]

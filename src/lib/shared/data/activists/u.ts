@@ -11,6 +11,8 @@ const u = {
 			desc: [{ title: '', text: '' }],
 			wikiLink: 'https://pl.wikipedia.org/wiki/Jaros%C5%82aw_Urba%C5%84ski_(socjolog)',
 			birthDate: 'ur. 1964',
+			prisonTime: 0,
+			sanction: 0,
 			deathDate: ''
 		}
 	]

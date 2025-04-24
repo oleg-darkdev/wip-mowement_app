@@ -16,6 +16,8 @@ const f = {
 			],
 			wikiLink: 'https://pl.wikipedia.org/wiki/Egon_Fietke',
 			birthDate: '10 lipca 1967',
+			prisonTime: 0,
+			sanction: 0,
 			deathDate: ''
 		}
 	]

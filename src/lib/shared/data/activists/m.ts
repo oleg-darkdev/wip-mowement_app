@@ -10,6 +10,8 @@ const m = {
 			desc: [{ title: '', text: '' }],
 			wikiLink: 'https://pl.wikipedia.org/wiki/Magdalena_Maliszewska',
 			birthDate: '14 stycznia 1962',
+			prisonTime: 0,
+			sanction: 0,
 			deathDate: ''
 		},
 		{
@@ -22,6 +24,8 @@ const m = {
 			desc: [{ title: '', text: '' }],
 			wikiLink: 'https://pl.wikipedia.org/wiki/Marcin_Mamo%C5%84',
 			birthDate: '10 października 1968',
+			prisonTime: 0,
+			sanction: 0,
 			deathDate: ''
 		},
 		{
@@ -34,6 +38,8 @@ const m = {
 			desc: [{ title: '', text: '' }],
 			wikiLink: 'https://pl.wikipedia.org/wiki/Mariusz_Maszkiewicz',
 			birthDate: '',
+			prisonTime: 0,
+			sanction: 0,
 			deathDate: ''
 		},
 		{
@@ -45,6 +51,8 @@ const m = {
 			desc: [{ title: '', text: '' }],
 			wikiLink: 'https://pl.wikipedia.org/wiki/Cezary_Michalski',
 			birthDate: '21 października 1963',
+			prisonTime: 0,
+			sanction: 0,
 			deathDate: ''
 		},
 		{
@@ -57,6 +65,8 @@ const m = {
 			desc: [{ title: '', text: '' }],
 			wikiLink: 'https://pl.wikipedia.org/wiki/Konstanty_Miodowicz',
 			birthDate: '9 stycznia 1951',
+			prisonTime: 0,
+			sanction: 0,
 			deathDate: '23 sierpnia 2013'
 		},
 		{
@@ -69,6 +79,8 @@ const m = {
 			desc: [{ title: '', text: '' }],
 			wikiLink: 'https://pl.wikipedia.org/wiki/Andrzej_Miszk',
 			birthDate: '27 września 1964',
+			prisonTime: 0,
+			sanction: 0,
 			deathDate: ''
 		}
 	]

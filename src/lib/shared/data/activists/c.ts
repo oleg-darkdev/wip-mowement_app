@@ -16,6 +16,8 @@ const c = {
 			],
 			wikiLink: 'https://pl.wikipedia.org/wiki/Jacek_Czaputowicz',
 			birthDate: '30 maja 1956',
+			prisonTime: 0,
+			sanction: 0,
 			deathDate: ''
 		}
 	]

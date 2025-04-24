@@ -10,6 +10,8 @@ const s = {
 			desc: [{ title: '', text: '' }],
 			wikiLink: 'https://pl.wikipedia.org/wiki/Magdalena_Sadowska-Czaputowicz',
 			birthDate: '20 czerwca 1956',
+			prisonTime: 0,
+			sanction: 0,
 			deathDate: '15 sierpnia 2017'
 		},
 		{
@@ -22,6 +24,8 @@ const s = {
 			desc: [{ title: '', text: '' }],
 			wikiLink: 'https://pl.wikipedia.org/wiki/Bart%C5%82omiej_Sienkiewicz',
 			birthDate: '29 lipca 1961',
+			prisonTime: 0,
+			sanction: 0,
 			deathDate: ''
 		},
 		{
@@ -34,6 +38,8 @@ const s = {
 			desc: [{ title: '', text: '' }],
 			wikiLink: 'https://pl.wikipedia.org/wiki/Andrzej_Stasiuk',
 			birthDate: '25 września 1960',
+			prisonTime: 0,
+			sanction: 0,
 			deathDate: ''
 		},
 		{
@@ -45,6 +51,8 @@ const s = {
 			desc: [{ title: '', text: '' }],
 			wikiLink: 'https://pl.wikipedia.org/wiki/Jacek_Szymanderski',
 			birthDate: '21 lutego 1945',
+			prisonTime: 0,
+			sanction: 0,
 			deathDate: ''
 		}
 	]

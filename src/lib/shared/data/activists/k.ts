@@ -15,6 +15,8 @@ const k = {
 			],
 			wikiLink: 'https://pl.wikipedia.org/wiki/Jaros%C5%82aw_Kapsa',
 			birthDate: '11 maja 1958',
+			prisonTime: 0,
+			sanction: 0,
 			deathDate: ''
 		},
 		{
@@ -32,6 +34,8 @@ const k = {
 			],
 			wikiLink: 'https://pl.wikipedia.org/wiki/Maciej_Klepacz',
 			birthDate: '23 lutego 1964',
+			prisonTime: 0,
+			sanction: 0,
 			deathDate: ''
 		},
 		{
@@ -49,6 +53,8 @@ const k = {
 			],
 			wikiLink: 'https://pl.wikipedia.org/wiki/Bogdan_Klich',
 			birthDate: '8 maja 1960',
+			prisonTime: 0,
+			sanction: 0,
 			deathDate: ''
 		},
 		{
@@ -66,6 +72,8 @@ const k = {
 			],
 			wikiLink: 'https://pl.wikipedia.org/wiki/Marek_Kossakowski_(dziennikarz)',
 			birthDate: '18 marca 1952',
+			prisonTime: 0,
+			sanction: 0,
 			deathDate: ''
 		},
 		{
@@ -82,6 +90,8 @@ const k = {
 			],
 			wikiLink: 'https://pl.wikipedia.org/wiki/Barbara_Koz%C5%82owska_(opozycjonistka)',
 			birthDate: '5 lipca 1956',
+			prisonTime: 0,
+			sanction: 0,
 			deathDate: ''
 		}
 	]

@@ -11,6 +11,8 @@ const ł = {
 			desc: [{ title: '', text: '' }],
 			wikiLink: 'https://pl.wikipedia.org/wiki/Cezary_%C5%81azarewicz',
 			birthDate: '6 lipca 1966',
+			prisonTime: 0,
+			sanction: 0,
 			deathDate: ''
 		}
 	]
