@@ -3,8 +3,7 @@
 <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 25 23" style="enable-background:new 0 0 25 23;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:none;stroke:#F1EFEE;stroke-width:3;stroke-miterlimit:10;}
+	.st0{fill:#F1EFEE;}
 </style>
-<path class="st0" d="M25,11.7H2.8"/>
-<path class="st0" d="M12.5,21.4l-9.7-9.7L12.5,2"/>
+<polygon class="st0" points="24.7,10.9 4.3,10.9 9.7,5.6 9.7,2.2 0,11.9 9.7,21.6 9.7,18.2 4.5,13 24.7,13 "/>
 </svg>
