@@ -11,7 +11,6 @@ import ShopBtn from './ShopBtn.svelte';
 import NextStepBtnLanding from './NextStepBtnLanding.svelte';
 import PrevStepBtnLanding from './PrevStepBtnLanding.svelte';
 // import SummaryCitiesCard from './SummaryCitiesCard.svelte';
-// import SummaryCitiesCard from './SummaryCitiesCard.svelte';
 
 export {
 	Layout,
@@ -25,6 +24,5 @@ export {
 	SummaryActionsMiniCard,
 	PlayBtn,
 	ShopBtn,
-	NextStepBtnLanding,
-
+	NextStepBtnLanding
 };

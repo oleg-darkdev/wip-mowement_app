@@ -501,81 +501,6 @@ sopot.actions_1992 = [];
 gdynia.actions_1992 = [];
 belchatow.actions_1992 = [];
 
-const appScreensMenu = [
-	{
-		title: 'Ogólne informacje',
-		id: 1,
-		progress: 0,
-		data: ['', '', '', '']
-	},
-	{
-		title: 'Organizacje',
-		id: 2,
-		progress: 0,
-		data: allOrgs
-	},
-	{
-		title: 'Uczestniki',
-		id: 3,
-		progress: 0,
-		data: activistsListApp
-	},
-	{
-		title: 'Miasta',
-		id: 4,
-		progress: 0,
-		data: cities
-	},
-	{
-		title: 'Akcji 1985 r.',
-		id: 5,
-		progress: 0,
-		data: records_1985
-	},
-	{
-		title: 'Akcji 1986 r.',
-		id: 6,
-		progress: 0,
-		data: records_1986
-	},
-	{
-		title: 'Akcji 1987 r.',
-		id: 7,
-		progress: 0,
-		data: records_1987
-	},
-	{
-		title: 'Akcji 1988 r.',
-		id: 8,
-		progress: 0,
-		data: records_1988
-	},
-	{
-		title: 'Akcji 1989 r.',
-		id: 9,
-		progress: 0,
-		data: records_1989
-	},
-	{
-		title: 'Akcji 1990 r.',
-		id: 10,
-		progress: 0,
-		data: records_1990
-	},
-	{
-		title: 'Akcji 1991 r.',
-		id: 11,
-		progress: 0,
-		data: records_1991
-	},
-	{
-		title: 'Akcji 1992 r.',
-		id: 12,
-		progress: 0,
-		data: records_1992
-	}
-];
-
 const actionsCounter = [
 	{ text: 1985, count: records_1985.length, id: 1, anchor: '/#akcji-1985' },
 	{ text: 1986, count: records_1986.length, id: 2, anchor: '/#akcji-1986' },
@@ -639,7 +564,6 @@ export {
 	//
 	partnersList,
 	otherLinks,
-	appScreensMenu,
 	goals,
 	activistsList,
 	activistsListApp,
