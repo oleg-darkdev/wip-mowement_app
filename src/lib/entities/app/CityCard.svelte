@@ -1,64 +1,46 @@
 <script lang="ts">
 	import { SummaryActionsMiniCard } from '$sharedUi';
-	// import {  } from '$widgets';
-	// import {  } from '$entities'
+	import { slide } from 'svelte/transition';
 
-	let {
-		title,
-		desc,
-		shortDesc,
-		index,
-		groups,
-		actions_1985,
-		actions_1986,
-		actions_1987,
-		actions_1988,
-		actions_1989,
-		actions_1990,
-		actions_1991,
-		actions_1992,
-		localisation
-	} = $props();
+	let { city } = $props();
 </script>
 
-<div role="listitem" class=" w-dyn-item legal_list-item">
-	<div style="background-color:rgba(0,0,0,0)" role="region" class=" w-full">
-		<div class="h-[59vh] overflow-y-scroll legal_item">
-			<div class="">
-				<h3 class="heading-style-h6"><span class="mr-4">{index}.</span> {localisation}</h3>
-				<div class="text-size-medium w-embed">
-					<div class="flex flex-row flex-wrap">
-						<SummaryActionsMiniCard title="1985" actions={actions_1985} />
-						<SummaryActionsMiniCard title="1986" actions={actions_1986} />
-						<SummaryActionsMiniCard title="1987" actions={actions_1987} />
-						<SummaryActionsMiniCard title="1988" actions={actions_1988} />
-						<SummaryActionsMiniCard title="1989" actions={actions_1989} />
-						<SummaryActionsMiniCard title="1990" actions={actions_1990} />
-						<SummaryActionsMiniCard title="1991" actions={actions_1991} />
-						<SummaryActionsMiniCard title="1992" actions={actions_1992} />
-					</div>
+<div transition:slide style="background-color:rgba(0,0,0,0) mt-4 " role="region" class=" w-full">
+	<div class="legal_item max-h-[59vh] overflow-y-scroll">
+		<div class="">
+			<h3 class="heading-style-h6">{city.localisation}</h3>
+			<div class="text-size-medium w-embed">
+				<div class="flex flex-row flex-wrap">
+					<SummaryActionsMiniCard title="1985" actions={city.actions_1985} />
+					<SummaryActionsMiniCard title="1986" actions={city.actions_1986} />
+					<SummaryActionsMiniCard title="1987" actions={city.actions_1987} />
+					<SummaryActionsMiniCard title="1988" actions={city.actions_1988} />
+					<SummaryActionsMiniCard title="1989" actions={city.actions_1989} />
+					<SummaryActionsMiniCard title="1990" actions={city.actions_1990} />
+					<SummaryActionsMiniCard title="1991" actions={city.actions_1991} />
+					<SummaryActionsMiniCard title="1992" actions={city.actions_1992} />
+				</div>
 
-					<div role="region" class="flex flex-col">
-						<div class="tab_item-title mr-6">
-							<p class="">Aktywne grupy:</p>
-						</div>
-						<div class="tab_item-content">
-							<ul role="list" class="flex flex-row flex-wrap justify-between">
-								{#each groups as { title, abbr, anchor }}
-									<li class="opening-times_list-item mr-6">
-										<a class="info_link-text" href="/#{anchor}"> <span>{abbr}</span></a>
-									</li>
-								{/each}
-							</ul>
-						</div>
+				<div role="region" class="flex flex-col">
+					<div class="tab_item-title mr-6">
+						<p class="">Aktywne grupy:</p>
+					</div>
+					<div class="tab_item-content">
+						<ul role="list" class="flex flex-row flex-wrap justify-between">
+							{#each city.groups as { title, abbr, anchor }}
+								<li class="opening-times_list-item mr-6">
+									<a class="info_link-text" href="/#{anchor}"> <span>{abbr}</span></a>
+								</li>
+							{/each}
+						</ul>
 					</div>
 				</div>
 			</div>
-			<div class=" lg:mt-6">
-				<p>
-					{shortDesc}
-				</p>
-			</div>
+		</div>
+		<div class=" lg:mt-6">
+			<p>
+				{city.shortDesc}
+			</p>
 		</div>
 	</div>
 </div>

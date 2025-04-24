@@ -1,79 +1,62 @@
 <script lang="ts">
-	import { fade, fly } from 'svelte/transition';
+	import { fade, fly, slide } from 'svelte/transition';
 	import { SummaryActionsMiniCard } from '$sharedUi';
 
-	let {
-		title,
-		index,
-		localisation,
-		shortDesc,
-		desc,
-		actions_1985,
-		actions_1986,
-		actions_1987,
-		actions_1988,
-		actions_1989,
-		actions_1990,
-		actions_1991,
-		actions_1992
-	} = $props();
+	let { org } = $props();
 </script>
 
-<div role="listitem" class=" w-dyn-item">
-	<div style="background-color:rgba(0,0,0,0)" class="riot-list_link-block w-inline-block w-full">
-		<div class="h-[59vh] overflow-y-scroll">
-			<div class="">
-				<div class="riot-list_link-block-content">
-					<div class="margin-bottom margin-xxsmall">
-						<h4 class="riot-list_link-text"><span class="mr-4">{index}.</span>{title}</h4>
-					</div>
-
-					<div class="text-size-medium w-embed">
-						<p class="">
-							<span>{localisation}</span>
-							<span class="mx-2">|</span>
-							<!-- {date} -->
-						</p>
-					</div>
+<div
+	transition:slide
+	style="background-color:rgba(0,0,0,0)"
+	class="riot-list_link-block w-inline-block mt-4 w-full"
+>
+	<div class="max-h-[59vh] overflow-y-scroll">
+		<div class="">
+			<div class="riot-list_link-block-content">
+				<div class="margin-bottom margin-xxsmall">
+					<!-- <span class="mr-4">{progress}.</span> -->
+					<h4 class="riot-list_link-text">{org.title}</h4>
 				</div>
 
-				<div class="flex w-full flex-row flex-wrap">
-					<SummaryActionsMiniCard title="1985" actions={actions_1985} />
-					<SummaryActionsMiniCard title="1986" actions={actions_1986} />
-					<SummaryActionsMiniCard title="1987" actions={actions_1987} />
-					<SummaryActionsMiniCard title="1988" actions={actions_1988} />
-					<SummaryActionsMiniCard title="1989" actions={actions_1989} />
-					<SummaryActionsMiniCard title="1990" actions={actions_1990} />
-					<SummaryActionsMiniCard title="1991" actions={actions_1991} />
-					<SummaryActionsMiniCard title="1992" actions={actions_1992} />
-				</div>
-
-				<div class="flex w-full flex-col content-start items-start justify-start pr-4 pt-7">
-					<p class="text-size-medium mb-2">
-						{shortDesc}
+				<div class="text-size-medium w-embed">
+					<p class="">
+						<span>{org.localisation}</span>
+						<span class="mx-2">|</span>
+						<!-- {date} -->
 					</p>
-
-					<!-- text-weight-bold -->
-					<div in:fly={{ y: 200 }} out:fade class="text-size-medium mb-4">
-						{#each desc as text}
-							<p class=" mb-2">
-								{text}
-							</p>
-						{/each}
-					</div>
 				</div>
 			</div>
 
-			<div class="riot-list_image-slider-wrapper pointer-events-off max-w-sm">
-				<div class="riot-list_link-image">
-					<img
-						src="images/about_2.jpg"
-						loading="lazy"
-						alt=""
-						sizes="100vw"
-						class="riot-list_image"
-					/>
+			<div class="flex w-full flex-row flex-wrap">
+				<SummaryActionsMiniCard title="1985" actions={org.actions_1985} />
+				<SummaryActionsMiniCard title="1986" actions={org.actions_1986} />
+				<SummaryActionsMiniCard title="1987" actions={org.actions_1987} />
+				<SummaryActionsMiniCard title="1988" actions={org.actions_1988} />
+				<SummaryActionsMiniCard title="1989" actions={org.actions_1989} />
+				<SummaryActionsMiniCard title="1990" actions={org.actions_1990} />
+				<SummaryActionsMiniCard title="1991" actions={org.actions_1991} />
+				<SummaryActionsMiniCard title="1992" actions={org.actions_1992} />
+			</div>
+
+			<div class="flex w-full flex-col content-start items-start justify-start pr-4 pt-7">
+				<p class="text-size-medium mb-2">
+					{org.shortDesc}
+				</p>
+
+				<!-- text-weight-bold -->
+				<div in:fly={{ y: 200 }} out:fade class="text-size-medium mb-4">
+					{#each org.desc as text}
+						<p class=" mb-2">
+							{text}
+						</p>
+					{/each}
 				</div>
+			</div>
+		</div>
+
+		<div class="riot-list_image-slider-wrapper pointer-events-off max-w-sm">
+			<div class="riot-list_link-image">
+				<img src="images/about_2.jpg" loading="lazy" alt="" sizes="100vw" class="riot-list_image" />
 			</div>
 		</div>
 	</div>

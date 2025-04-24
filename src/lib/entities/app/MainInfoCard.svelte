@@ -9,7 +9,7 @@
 	transition:slide
 	aria-label="Accordion Control Group Buttons"
 	role="list"
-	class="tab_content-list w-list-unstyled pt-4"
+	class="tab_content-list w-list-unstyled"
 >
 	<slot />
 </ul>
