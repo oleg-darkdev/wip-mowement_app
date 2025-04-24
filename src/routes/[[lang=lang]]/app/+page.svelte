@@ -58,13 +58,14 @@
 <div class="h-screen">
 	<!-- {#if $selectedMenu} -->
 	<Header />
+
 	<main class="flex h-[68vh] flex-col content-center items-center overflow-x-hidden">
 		{#if $selectedMenu == 0}
-			<section class="w-full max-w-2xl overflow-y-hidden">
-				<div class="padding-global">
-					<div class="container-large">
-						<div class="">
-							<div class="container-large overflow-y-hidden">
+			<section class="w-full h-full max-w-2xl overflow-y-hidden">
+				<div class="padding-global w-full h-full ">
+					<div class="container-large w-full h-full ">
+						<div class="h-full w-full">
+							<div class="container-large h-full w-full overflow-y-hidden">
 								{#if $welcomeScreen}
 									<WelcomeScreen />
 								{:else}

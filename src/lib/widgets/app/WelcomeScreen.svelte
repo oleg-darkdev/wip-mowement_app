@@ -4,8 +4,11 @@
 	import { welcomeScreen } from '$stores/app';
 </script>
 
-<div class="flex flex-col content-center items-center justify-center" transition:slide>
-	<div class="margin-bottom margin-small">
+<div
+	class="flex h-full w-full flex-col content-center items-center justify-center"
+	transition:slide
+>
+	<div class=" margin-bottom margin-small">
 		<h3 class="tab_heading text-center">
 			Witamy w przewodniku <br /> po ruchu <br class="hidden-sm" />
 			<span>
