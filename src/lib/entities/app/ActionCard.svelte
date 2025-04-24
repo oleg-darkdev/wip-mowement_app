@@ -1,45 +1,53 @@
 <script lang="ts">
 	import { fade, fly } from 'svelte/transition';
 
-	let { title, date, link, id, localisation, shortDesc, desc } = $props();
+	let { title, date, link, index, localisation, shortDesc, desc } = $props();
 </script>
 
 <div role="listitem" class=" w-dyn-item">
 	<div style="background-color:rgba(0,0,0,0)" class="riot-list_link-block w-inline-block w-full">
-		<div class="l">
-			<div class="riot-list_link-block-content">
-				<div class="margin-bottom margin-xxsmall">
-					<h4 class="riot-list_link-text"><span class="mr-4">{id}.</span>{title}</h4>
-				</div>
+		<div class="h-[59vh] overflow-y-scroll">
+			<div class="">
+				<div class="riot-list_link-block-content">
+					<div class="margin-bottom margin-xxsmall">
+						<h4 class="riot-list_link-text"><span class="mr-4">{index}.</span>{title}</h4>
+					</div>
 
-				<div class="text-size-medium w-embed">
-					<p class="">
-						<span>{localisation}</span> <span class="mx-2">|</span>
-						{date}
-					</p>
-				</div>
-			</div>
-
-			<!-- col-span-2  -->
-			<div class="flex w-full flex-col content-start items-start justify-start pr-4 pt-7">
-				<p class="text-size-medium mb-2">
-					{shortDesc}
-				</p>
-
-				<!-- text-weight-bold -->
-				<div out:fade class="text-size-medium mb-4">
-					{#each desc as text}
-						<p class=" mb-2">
-							{text}
+					<div class="text-size-medium w-embed">
+						<p class="">
+							<span>{localisation}</span> <span class="mx-2">|</span>
+							{date}
 						</p>
-					{/each}
+					</div>
+				</div>
+
+				<!-- col-span-2  -->
+				<div class="flex w-full flex-col content-start items-start justify-start pr-4 pt-7">
+					<p class="text-size-medium mb-2">
+						{shortDesc}
+					</p>
+
+					<!-- text-weight-bold -->
+					<div out:fade class="text-size-medium mb-4">
+						{#each desc as text}
+							<p class=" mb-2">
+								{text}
+							</p>
+						{/each}
+					</div>
 				</div>
 			</div>
-		</div>
 
-		<div class="riot-list_image-slider-wrapper pointer-events-off max-w-sm">
-			<div class="riot-list_link-image">
-				<img src="images/about_2.jpg" loading="lazy" alt="" sizes="100vw" class="riot-list_image" />
+			<div class="riot-list_image-slider-wrapper pointer-events-off max-w-sm">
+				<div class="riot-list_link-image">
+					<img
+						src="images/about_2.jpg"
+						loading="lazy"
+						alt=""
+						sizes="100vw"
+						class="riot-list_image"
+					/>
+				</div>
 			</div>
 		</div>
 	</div>

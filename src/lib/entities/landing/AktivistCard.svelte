@@ -1,5 +1,5 @@
 <script lang="ts">
-	let { firstName, lastName, shortDesc, photo, wikiLink, birthDate, deathDate, desc, number } =
+	let { firstName, lastName, shortDesc, photo, wikiLink, birthDate, deathDate, prisonTime, desc, number } =
 		$props();
 </script>
 
@@ -13,6 +13,7 @@
 				</h4>
 			</div>
 
+			<!-- prisonTime -->
 			<div class="text-size-medium w-embed">
 				<p class="">
 					<em>{birthDate} <br /> {deathDate ? `${deathDate}` : ''}</em>
@@ -20,7 +21,7 @@
 			</div>
 		</div>
 
-		<div class="flex w-full flex-col content-start items-start justify-start pr-4">
+		<div class="flex w-full flex-col content-start items-start justify-start pr-4 pt-4">
 			<p class="text-size-medium mb-2 mb-6 h-auto max-w-[350px] truncate">
 				{shortDesc}
 			</p>

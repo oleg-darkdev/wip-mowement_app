@@ -4,7 +4,7 @@
 	import { ProgressPanel } from '$entitiesApp';
 </script>
 
-<section class="w-full max-w-2xl ">
+<section class="w-full max-w-2xl overflow-hidden ">
 	{#if $selectedAppMode.progress < $selectedAppMode.data.length}
 		<div transition:slide class="w-full px-4">
 			<ProgressPanel

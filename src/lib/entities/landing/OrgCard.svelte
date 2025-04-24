@@ -12,7 +12,7 @@
 			<h3 class="heading-style-h6"><span class="mr-4">{id}.</span> {abbr}</h3>
 			<div class="text-size-medium w-embed">
 				<p class="">
-					<em>{title}</em> <strong>{localisation}</strong>
+					<em class='mr-2'>{title}</em> <br class="hidden-lg" /> <strong >{localisation}</strong>
 				</p>
 			</div>
 		</div>
@@ -25,4 +25,13 @@
 </li>
 
 <style lang="postcss">
+	.hidden-lg {
+		display: none;
+	}
+
+	@media screen and (max-width: 991px) {
+		.hidden-lg {
+			display: inline;
+		}
+	}
 </style>

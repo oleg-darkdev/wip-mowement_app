@@ -8,17 +8,16 @@
 			<h4 class="heading-style-h6">Miasta:</h4>
 		</div>
 
-		<div class="">
-			<ul role="list" class="flex flex-row flex-wrap justify-between">
-				{#each cities as { localisation, totalActions, anchor }}
-					<li class="mx-4">
-						<a class="info_link-text" href="/#{anchor}"
-							>{localisation} – <strong>{totalActions}</strong> akcji.</a
-						>
-					</li>
-				{/each}
-			</ul>
-		</div>
+		<!--  -->
+		<ul role="list" class="-ml-6 md:m-0 lg:m-0 flex flex-row flex-wrap items-start content-start justify-between">
+			{#each cities as { localisation, totalActions, anchor }}
+				<li class="mx-2 lg:mx-4">
+					<a class="info_link-text" href="/#{anchor}"
+						>{localisation} – <strong>{totalActions}</strong> akcji.</a
+					>
+				</li>
+			{/each}
+		</ul>
 	</div>
 </li>
 

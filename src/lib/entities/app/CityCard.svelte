@@ -7,7 +7,7 @@
 		title,
 		desc,
 		shortDesc,
-		id,
+		index,
 		groups,
 		actions_1985,
 		actions_1986,
@@ -22,47 +22,53 @@
 </script>
 
 <div role="listitem" class=" w-dyn-item legal_list-item">
-	<div style="background-color:rgba(0,0,0,0)" role="region" class="legal_item w-full">
-		<div class="">
-			<h3 class="heading-style-h6"><span class="mr-4">{id}.</span> {localisation}</h3>
-			<div class="text-size-medium w-embed">
-				<div class="flex flex-row flex-wrap">
-					<SummaryActionsMiniCard title="1985" actions={actions_1985} />
-					<SummaryActionsMiniCard title="1986" actions={actions_1986} />
-					<SummaryActionsMiniCard title="1987" actions={actions_1987} />
-					<SummaryActionsMiniCard title="1988" actions={actions_1988} />
-					<SummaryActionsMiniCard title="1989" actions={actions_1989} />
-					<SummaryActionsMiniCard title="1990" actions={actions_1990} />
-					<SummaryActionsMiniCard title="1991" actions={actions_1991} />
-					<SummaryActionsMiniCard title="1992" actions={actions_1992} />
-				</div>
-
-				<div role="region" class="flex flex-col">
-					<div class="tab_item-title mr-6">
-						<p class="">Aktywne grupy:</p>
+	<div style="background-color:rgba(0,0,0,0)" role="region" class=" w-full">
+		<div class="h-[59vh] overflow-y-scroll legal_item">
+			<div class="">
+				<h3 class="heading-style-h6"><span class="mr-4">{index}.</span> {localisation}</h3>
+				<div class="text-size-medium w-embed">
+					<div class="flex flex-row flex-wrap">
+						<SummaryActionsMiniCard title="1985" actions={actions_1985} />
+						<SummaryActionsMiniCard title="1986" actions={actions_1986} />
+						<SummaryActionsMiniCard title="1987" actions={actions_1987} />
+						<SummaryActionsMiniCard title="1988" actions={actions_1988} />
+						<SummaryActionsMiniCard title="1989" actions={actions_1989} />
+						<SummaryActionsMiniCard title="1990" actions={actions_1990} />
+						<SummaryActionsMiniCard title="1991" actions={actions_1991} />
+						<SummaryActionsMiniCard title="1992" actions={actions_1992} />
 					</div>
-					<div class="tab_item-content">
-						<ul role="list" class="flex flex-row flex-wrap justify-between">
-							{#each groups as { title, abbr, anchor }}
-								<li class="opening-times_list-item mr-6">
-									<a class="info_link-text" href="/#{anchor}"> <span>{abbr}</span></a>
-								</li>
-							{/each}
-						</ul>
+
+					<div role="region" class="flex flex-col">
+						<div class="tab_item-title mr-6">
+							<p class="">Aktywne grupy:</p>
+						</div>
+						<div class="tab_item-content">
+							<ul role="list" class="flex flex-row flex-wrap justify-between">
+								{#each groups as { title, abbr, anchor }}
+									<li class="opening-times_list-item mr-6">
+										<a class="info_link-text" href="/#{anchor}"> <span>{abbr}</span></a>
+									</li>
+								{/each}
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class=" lg:mt-6">
-			<p>
-				{shortDesc}
-			</p>
+			<div class=" lg:mt-6">
+				<p>
+					{shortDesc}
+				</p>
+			</div>
 		</div>
 	</div>
 </div>
 
 <style lang="postcss">
 	/*  */
+
+	.card-wrapper {
+		height: 60vh;
+	}
 	.legal_item {
 		grid-column-gap: 1rem;
 		grid-row-gap: 1rem;

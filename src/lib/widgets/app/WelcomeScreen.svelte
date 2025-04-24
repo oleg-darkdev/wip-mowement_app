@@ -34,7 +34,8 @@
 <section class="w-full max-w-2xl overflow-y-hidden">
 	<div class="padding-global">
 		<div class="container-large">
-			<div class="padding-section-large">
+			<div class="">
+				<!-- padding-section-large -->
 				<!-- padding-section-large -->
 				<!-- <div class="padding-global"> -->
 				<div class="container-large overflow-y-hidden">
@@ -52,14 +53,12 @@
 									>
 								</h3>
 							</div>
-							<p class="text-size-medium mb-10 ">
+							<p class="text-size-medium mb-10">
 								Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia
-								tekstem próbnej książki. Pięć wieków później zaczął być używany przemyśle
-								elektronicznym, pozostając praktycznie niezmienionym.
+								tekstem próbnej książki. Pięć wieków później zaczął być używany.
 								<span class="text-weight-bold"
 									>Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia
-									tekstem próbnej książki. Pięć wieków później zaczął być używany przemyśle
-									elektronicznym, pozostając praktycznie niezmienionym.
+									tekstem próbnej książki.
 								</span>
 							</p>
 
@@ -69,13 +68,20 @@
 									<div class="button-background"></div>
 								</a>
 
-								<button onclick={() => ($welcomeScreen = false)} class="button is-primary"
+								<div class="">
+									<button onclick={() => ($welcomeScreen = false)} class="button is-icon is-primary"
+										><div class="button-text button-next-slide"></div>
+										<div class="button-background"></div>
+									</button>
+								</div>
+
+								<!-- <button class="button is-primary"
 									><div class="button-text">
 										<span class="hidden sm:inline">Rozpocząć</span>
 										<span class="inline sm:hidden">&lt;</span>
 									</div>
 									<div class="button-background"></div>
-								</button>
+								</button> -->
 							</div>
 						</div>
 					{:else}
@@ -94,7 +100,8 @@
 												</div>
 												<div class="tab_item-content">
 													<div>
-														<span class='hidden-sm'>progres</span> <span>{mode.progress}</span> / <span>{mode.data.length}</span>
+														<span class="hidden-sm">progres</span> <span>{mode.progress}</span> /
+														<span>{mode.data.length}</span>
 													</div>
 												</div>
 											</div>
@@ -139,11 +146,28 @@
 </div> -->
 
 <style lang="postcss">
-@media screen and (max-width: 991px) {
-.tab_item {
-	display: flex;
-	justify-content: space-between;
-	flex-direction: row;
-}
-}
+	.button-next-slide {
+		cursor: pointer;
+		background-image: url(images/arrow_light.svg);
+		background-position: 50%;
+		background-repeat: no-repeat;
+		background-size: auto;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		padding: 1rem;
+		display: flex;
+	}
+	.button-next-slide:hover {
+		background-color: var(--grey);
+	}
+
+	@media screen and (max-width: 991px) {
+		.tab_item {
+			display: flex;
+			justify-content: space-between;
+			flex-direction: row;
+		}
+	}
 </style>

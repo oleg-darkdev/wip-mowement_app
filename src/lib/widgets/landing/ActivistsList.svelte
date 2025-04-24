@@ -31,7 +31,7 @@
 				<div class="archive-list_component">
 					<div class="archive_list-wrapper w-dyn-list">
 						<div role="list" class="grid grid-cols-1 gap-x-6 lg:grid-cols-2">
-							{#each showFullList ? activistsList : activistsList.slice(0, 3) as { firstName, lastName, shortDesc, photo, wikiLink, birthDate, deathDate, desc, id }, number}
+							{#each showFullList ? activistsList : activistsList.slice(0, 3) as { firstName, lastName, shortDesc, photo, wikiLink, birthDate, deathDate, prisonTime, desc, id }, number}
 								<AktivistCard
 									{firstName}
 									{lastName}
@@ -40,6 +40,7 @@
 									{wikiLink}
 									{birthDate}
 									{deathDate}
+									{prisonTime}
 									{desc}
 									{number}
 								/>
