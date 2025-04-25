@@ -18,7 +18,7 @@
 				</div>
 				<div class="product-overview-price-holder sold-out">
 					<div fs-cmssort-field="price" class="product-overview-price">
-						complexity: <span class="ml-2">{product.complexity}</span>
+						lorem: <span class="ml-2">{product.complexity}</span>
 					</div>
 				</div>
 			</div>
