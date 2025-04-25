@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { navigation, navigationNgo, partnersList, otherLinks } from '$sharedData';
+	// otherLinks
+	import { navigation, navigationNgo, partnersList } from '$sharedData';
 	// import {  } from '$widgets';
 	// import {  } from '$entities'
 </script>
@@ -91,8 +92,9 @@
 							{/each}
 						</div>
 					</div>
-					<div class="footer_card-small bottom">
-						<div class="footer_link-list">
+					<!-- footer_card-small  -->
+					<div class="px-8 pb-4 bottom">
+						<!-- <div class="footer_link-list">
 							<div class="margin-bottom margin-xsmall">
 								<h4 class="heading-style-h6">Przydatne odnośniki</h4>
 							</div>
@@ -110,18 +112,18 @@
 							<a href="/" class="footer_link w-inline-block">
 								<div class="footer_link-text">Lorem Ipsum</div>
 							</a>
-						</div>
+						</div> -->
 						<div class="footer_link-list">
 							<div class="margin-bottom margin-xsmall">
 								<h4 class="heading-style-h6">Partnerzy projektu</h4>
 							</div>
-							{#each partnersList as { img, title, link }}
-								<div class="margin-bottom margin-xsmall">
-									<a href="/" target="_blank" class="link-block w-inline-block">
+							<div class="flex flex-row w-full flex-wrap justify-between">
+								{#each partnersList as { img, title, link }}
+									<a href="/" target="_blank" class="m-1 link-block w-inline-block">
 										<img src={img} loading="lazy" alt="" class="footer-image" />
 									</a>
-								</div>
-							{/each}
+								{/each}
+							</div>
 						</div>
 					</div>
 				</div>

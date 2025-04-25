@@ -4,6 +4,46 @@ const partners = [
 		title: 'Fundacja Wolność i Pokój',
 		link: 'https://fundacjawip.wordpress.com/'
 	},
+	{
+		img: '/images/partners/logo-foundation-gray.svg',
+		title: 'Fundacja Wolność i Pokój',
+		link: 'https://fundacjawip.wordpress.com/'
+	},
+	{
+		img: '/images/partners/logo-foundation-gray.svg',
+		title: 'Fundacja Wolność i Pokój',
+		link: 'https://fundacjawip.wordpress.com/'
+	},
+	{
+		img: '/images/partners/logo-foundation-gray.svg',
+		title: 'Fundacja Wolność i Pokój',
+		link: 'https://fundacjawip.wordpress.com/'
+	},
+	{
+		img: '/images/partners/logo-foundation-gray.svg',
+		title: 'Fundacja Wolność i Pokój',
+		link: 'https://fundacjawip.wordpress.com/'
+	},
+	{
+		img: '/images/partners/logo-foundation-gray.svg',
+		title: 'Fundacja Wolność i Pokój',
+		link: 'https://fundacjawip.wordpress.com/'
+	},
+	{
+		img: '/images/partners/logo-foundation-gray.svg',
+		title: 'Fundacja Wolność i Pokój',
+		link: 'https://fundacjawip.wordpress.com/'
+	},
+	{
+		img: '/images/partners/logo-foundation-gray.svg',
+		title: 'Fundacja Wolność i Pokój',
+		link: 'https://fundacjawip.wordpress.com/'
+	},
+	{
+		img: '/images/partners/logo-foundation-gray.svg',
+		title: 'Fundacja Wolność i Pokój',
+		link: 'https://fundacjawip.wordpress.com/'
+	},
 
 	// {
 	// 	img: '/images/partners/',

@@ -106,6 +106,7 @@
 						</div>
 					</div>
 
+					
 					<AppPreview />
 				</div>
 			</div>
@@ -113,9 +114,11 @@
 	</div>
 </section>
 
-<Shop>
-	<BtnWithArrow text="Full " link="/" />
-</Shop>
+<section class="background-color-gray py-10">
+	<Shop>
+		<BtnWithArrow text="Full " link="/" />
+	</Shop>
+</section>
 
 <div id="akcji-oporu" class="">
 	<div class="padding-section-large">

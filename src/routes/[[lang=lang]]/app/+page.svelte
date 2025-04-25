@@ -1,8 +1,10 @@
 <script lang="ts">
 	// import { SEO } from '$sharedUtils';
 	import { slide } from 'svelte/transition';
-	import { productslIst } from '$sharedData';
-	import { ShopCard } from '$entitiesLanding';
+	// import { productslIst } from '$sharedData';
+	import { Shop } from '$widgetsLanding';
+	import { PartnersList } from '$entitiesApp';
+
 	import {
 		NextStepBtnApp,
 		PrevStepBtnApp,
@@ -33,7 +35,8 @@
 		riots1990Mode,
 		riots1991Mode,
 		riots1992Mode,
-		orgsMode
+		orgsMode,
+		balance
 	} from '$stores/app';
 	import {
 		ActionCard,
@@ -60,7 +63,7 @@
 	{#if !$welcomeScreen}
 		<Header />
 	{/if}
-	<main class="flex h-[70vh] flex-col content-center items-center overflow-x-hidden">
+	<main class="flex h-[78vh] flex-col content-center items-center overflow-x-hidden">
 		{#if $selectedMenu == 0}
 			<section class="h-full w-full max-w-2xl overflow-y-hidden">
 				<div class="padding-global h-full w-full">
@@ -129,14 +132,22 @@
 								{/if}
 							</MainInfoCard>
 						</div>
-					{:else}
-						<CongratCard />
+					{:else if !$basicMode.birds}
+						<CongratCard
+							getBirds={() => {
+								$balance += $basicMode.prise;
+								$basicMode.birds = true;
+							}}
+						/>
+					{:else if $basicMode.birds}
+						<PartnersList />
 					{/if}
+
 					{#if $basicMode.progress != $basicMode.data.length}
 						<Footer>
 							<BackMenuBtn />
 							{#if $selectedMenu == 1}
-								<div class="ml-10 grid grid-cols-2 gap-x-8 px-4 h-24 pb-1">
+								<div class="ml-10 grid h-24 grid-cols-2 gap-x-8 px-4 pb-1">
 									{#if $basicMode.progress > 0 && $basicMode.progress != $basicMode.data.length}
 										<PrevStepBtnApp
 											prevStep={() => {
@@ -174,34 +185,43 @@
 									{/if}
 								{/each}
 							</div>
-						{:else}
-							<CongratCard />
+						{:else if !$orgsMode.birds}
+							<CongratCard
+								getBirds={() => {
+									$balance += $orgsMode.prise;
+									$orgsMode.birds = true;
+								}}
+							/>
+						{:else if $orgsMode.birds}
+							<PartnersList />
 						{/if}
-						<Footer>
-							<BackMenuBtn />
+						{#if $orgsMode.progress != $orgsMode.data.length}
+							<Footer>
+								<BackMenuBtn />
 
-							{#if $selectedMenu == 1}
-								<div class="ml-10 grid grid-cols-2 gap-x-8 px-4 h-24 pb-1">
-									{#if $orgsMode.progress > 0}
-										<PrevStepBtnApp
-											prevStep={() => {
-												$stepInstruction -= 1;
-												$orgsMode.progress -= 1;
-											}}
-										/>
-									{/if}
+								{#if $selectedMenu == 1}
+									<div class="ml-10 grid h-24 grid-cols-2 gap-x-8 px-4 pb-1">
+										{#if $orgsMode.progress > 0}
+											<PrevStepBtnApp
+												prevStep={() => {
+													$stepInstruction -= 1;
+													$orgsMode.progress -= 1;
+												}}
+											/>
+										{/if}
 
-									{#if $orgsMode.progress != $orgsMode.data.length}
-										<NextStepBtnApp
-											nextStep={() => {
-												$stepInstruction += 1;
-												$orgsMode.progress += 1;
-											}}
-										/>
-									{/if}
-								</div>
-							{/if}
-						</Footer>
+										{#if $orgsMode.progress != $orgsMode.data.length}
+											<NextStepBtnApp
+												nextStep={() => {
+													$stepInstruction += 1;
+													$orgsMode.progress += 1;
+												}}
+											/>
+										{/if}
+									</div>
+								{/if}
+							</Footer>
+						{/if}
 					</div>
 				{:else if $selectedPlayMenu == 3}
 					<div class="">
@@ -219,34 +239,44 @@
 									{/if}
 								{/each}
 							</div>
-						{:else}
-							<CongratCard />
+						{:else if !$activistsMode.birds}
+							<CongratCard
+								getBirds={() => {
+									$balance += $activistsMode.prise;
+									$activistsMode.birds = true;
+								}}
+							/>
+						{:else if $activistsMode.birds}
+							<PartnersList />
 						{/if}
-						<Footer>
-							<BackMenuBtn />
 
-							{#if $selectedMenu == 1}
-								<div class="ml-10 grid grid-cols-2 gap-x-8 px-4 h-24 pb-1">
-									{#if $activistsMode.progress > 0}
-										<PrevStepBtnApp
-											prevStep={() => {
-												$stepInstruction -= 1;
-												$activistsMode.progress -= 1;
-											}}
-										/>
-									{/if}
+						{#if $activistsMode.progress != $activistsMode.data.length}
+							<Footer>
+								<BackMenuBtn />
 
-									{#if $activistsMode.progress != $activistsMode.data.length}
-										<NextStepBtnApp
-											nextStep={() => {
-												$stepInstruction += 1;
-												$activistsMode.progress += 1;
-											}}
-										/>
-									{/if}
-								</div>
-							{/if}
-						</Footer>
+								{#if $selectedMenu == 1}
+									<div class="ml-10 grid h-24 grid-cols-2 gap-x-8 px-4 pb-1">
+										{#if $activistsMode.progress > 0}
+											<PrevStepBtnApp
+												prevStep={() => {
+													$stepInstruction -= 1;
+													$activistsMode.progress -= 1;
+												}}
+											/>
+										{/if}
+
+										{#if $activistsMode.progress != $activistsMode.data.length}
+											<NextStepBtnApp
+												nextStep={() => {
+													$stepInstruction += 1;
+													$activistsMode.progress += 1;
+												}}
+											/>
+										{/if}
+									</div>
+								{/if}
+							</Footer>
+						{/if}
 					</div>
 				{:else if $selectedPlayMenu == 4}
 					{#if $citiesMode.progress < $citiesMode.data.length}
@@ -263,34 +293,43 @@
 								{/if}
 							{/each}
 						</div>
-					{:else}
-						<CongratCard />
+					{:else if !$citiesMode.birds}
+						<CongratCard
+							getBirds={() => {
+								$balance += $citiesMode.prise;
+								$citiesMode.birds = true;
+							}}
+						/>
+					{:else if $citiesMode.birds}
+						<PartnersList />
 					{/if}
-					<Footer>
-						<BackMenuBtn />
+					{#if $citiesMode.progress != $citiesMode.data.length}
+						<Footer>
+							<BackMenuBtn />
 
-						{#if $selectedMenu == 1}
-							<div class="ml-10 grid grid-cols-2 gap-x-8 px-4 h-24 pb-1">
-								{#if $citiesMode.progress > 0}
-									<PrevStepBtnApp
-										prevStep={() => {
-											$stepInstruction -= 1;
-											$citiesMode.progress -= 1;
-										}}
-									/>
-								{/if}
+							{#if $selectedMenu == 1}
+								<div class="ml-10 grid h-24 grid-cols-2 gap-x-8 px-4 pb-1">
+									{#if $citiesMode.progress > 0}
+										<PrevStepBtnApp
+											prevStep={() => {
+												$stepInstruction -= 1;
+												$citiesMode.progress -= 1;
+											}}
+										/>
+									{/if}
 
-								{#if $citiesMode.progress != $citiesMode.data.length}
-									<NextStepBtnApp
-										nextStep={() => {
-											$stepInstruction += 1;
-											$citiesMode.progress += 1;
-										}}
-									/>
-								{/if}
-							</div>
-						{/if}
-					</Footer>
+									{#if $citiesMode.progress != $citiesMode.data.length}
+										<NextStepBtnApp
+											nextStep={() => {
+												$stepInstruction += 1;
+												$citiesMode.progress += 1;
+											}}
+										/>
+									{/if}
+								</div>
+							{/if}
+						</Footer>
+					{/if}
 				{:else if $selectedPlayMenu >= 5}
 					{#if $selectedPlayMenu == 5}
 						{#if $riots1985Mode.progress < $riots1985Mode.data.length}
@@ -304,35 +343,93 @@
 									<ActionCard data={riotAction} />
 								{/if}
 							{/each}
-						{:else}
-							<CongratCard />
+						{:else if !$riots1985Mode.birds}
+							<CongratCard
+								getBirds={() => {
+									$balance += $riots1985Mode.prise;
+									$riots1985Mode.birds = true;
+								}}
+							/>
+						{:else if $riots1985Mode.birds}
+							<PartnersList />
+						{/if}
+						{#if $riots1985Mode.progress != $riots1985Mode.data.length}
+							<Footer>
+								<BackMenuBtn />
+
+								{#if $selectedMenu == 1}
+									<div class="ml-10 grid max-h-24 grid-cols-2 gap-x-8 px-4 pb-1">
+										{#if $riots1985Mode.progress > 0}
+											<PrevStepBtnApp
+												prevStep={() => {
+													$stepInstruction -= 1;
+													$riots1985Mode.progress -= 1;
+												}}
+											/>
+										{/if}
+
+										{#if $riots1985Mode.progress != $riots1985Mode.data.length}
+											<NextStepBtnApp
+												nextStep={() => {
+													$stepInstruction += 1;
+													$riots1985Mode.progress += 1;
+												}}
+											/>
+										{/if}
+									</div>
+								{/if}
+							</Footer>
+						{/if}
+					{:else if $selectedPlayMenu == 6}
+						{#if $riots1986Mode.progress < $riots1986Mode.data.length}
+							<ProgressPanel
+								finalStep={$riots1986Mode.data.length}
+								progress={$riots1986Mode.progress}
+								title={$riots1986Mode.title}
+							/>
+							{#each $riots1986Mode.data as riotAction, index (riotAction.id)}
+								{#if $riots1986Mode.progress == index}
+									<ActionCard data={riotAction} />
+								{/if}
+							{/each}
+						{:else if !$riots1986Mode.birds}
+							<CongratCard
+								getBirds={() => {
+									$balance += $riots1986Mode.prise;
+									$riots1986Mode.birds = true;
+								}}
+							/>
+						{:else if $riots1986Mode.birds}
+							<PartnersList />
 						{/if}
 
-						<Footer>
-							<BackMenuBtn />
+						{#if $riots1986Mode.progress != $riots1986Mode.data.length}
+							<Footer>
+								<BackMenuBtn />
 
-							{#if $selectedMenu == 1}
-								<div class="ml-10 grid grid-cols-2 gap-x-8 px-4 max-h-24 pb-1">
-									{#if $riots1985Mode.progress > 0}
-										<PrevStepBtnApp
-											prevStep={() => {
-												$stepInstruction -= 1;
-												$riots1985Mode.progress -= 1;
-											}}
-										/>
-									{/if}
+								{#if $selectedMenu == 1}
+									<div class="ml-10 grid h-24 grid-cols-2 gap-x-8 px-4 pb-1">
+										{#if $riots1986Mode.progress > 0}
+											<PrevStepBtnApp
+												prevStep={() => {
+													$stepInstruction -= 1;
+													$riots1986Mode.progress -= 1;
+												}}
+											/>
+										{/if}
 
-									{#if $riots1985Mode.progress != $riots1985Mode.data.length}
-										<NextStepBtnApp
-											nextStep={() => {
-												$stepInstruction += 1;
-												$riots1985Mode.progress += 1;
-											}}
-										/>
-									{/if}
-								</div>
-							{/if}
-						</Footer>
+										{#if $riots1986Mode.progress != $riots1986Mode.data.length}
+											<NextStepBtnApp
+												nextStep={() => {
+													$stepInstruction += 1;
+													$riots1986Mode.progress += 1;
+												}}
+											/>
+										{/if}
+									</div>
+								{/if}
+							</Footer>
+						{/if}
 					{:else if $selectedPlayMenu == 6}
 						{#if $riots1987Mode.progress < $riots1987Mode.data.length}
 							<ProgressPanel
@@ -345,34 +442,44 @@
 									<ActionCard data={riotAction} />
 								{/if}
 							{/each}
-						{:else}
-							<CongratCard />
+						{:else if !$riots1987Mode.birds}
+							<CongratCard
+								getBirds={() => {
+									$balance += $riots1987Mode.prise;
+									$riots1987Mode.birds = true;
+								}}
+							/>
+						{:else if $riots1987Mode.birds}
+							<PartnersList />
 						{/if}
-						<Footer>
-							<BackMenuBtn />
 
-							{#if $selectedMenu == 1}
-								<div class="ml-10 grid grid-cols-2 gap-x-8 px-4 h-24 pb-1">
-									{#if $riots1987Mode.progress > 0}
-										<PrevStepBtnApp
-											prevStep={() => {
-												$stepInstruction -= 1;
-												$riots1987Mode.progress -= 1;
-											}}
-										/>
-									{/if}
+						{#if $riots1987Mode.progress != $riots1987Mode.data.length}
+							<Footer>
+								<BackMenuBtn />
 
-									{#if $riots1987Mode.progress != $riots1987Mode.data.length}
-										<NextStepBtnApp
-											nextStep={() => {
-												$stepInstruction += 1;
-												$riots1987Mode.progress += 1;
-											}}
-										/>
-									{/if}
-								</div>
-							{/if}
-						</Footer>
+								{#if $selectedMenu == 1}
+									<div class="ml-10 grid h-24 grid-cols-2 gap-x-8 px-4 pb-1">
+										{#if $riots1987Mode.progress > 0}
+											<PrevStepBtnApp
+												prevStep={() => {
+													$stepInstruction -= 1;
+													$riots1987Mode.progress -= 1;
+												}}
+											/>
+										{/if}
+
+										{#if $riots1987Mode.progress != $riots1987Mode.data.length}
+											<NextStepBtnApp
+												nextStep={() => {
+													$stepInstruction += 1;
+													$riots1987Mode.progress += 1;
+												}}
+											/>
+										{/if}
+									</div>
+								{/if}
+							</Footer>
+						{/if}
 					{:else if $selectedPlayMenu == 7}
 						{#if $riots1988Mode.progress < $riots1988Mode.data.length}
 							<ProgressPanel
@@ -385,34 +492,44 @@
 									<ActionCard data={riotAction} />
 								{/if}
 							{/each}
-						{:else}
-							<CongratCard />
+						{:else if !$riots1988Mode.birds}
+							<CongratCard
+								getBirds={() => {
+									$balance += $riots1988Mode.prise;
+									$riots1988Mode.birds = true;
+								}}
+							/>
+						{:else if $riots1988Mode.birds}
+							<PartnersList />
 						{/if}
-						<Footer>
-							<BackMenuBtn />
 
-							{#if $selectedMenu == 1}
-								<div class="ml-10 grid grid-cols-2 gap-x-8 px-4 h-24 pb-1">
-									{#if $riots1988Mode.progress > 0}
-										<PrevStepBtnApp
-											prevStep={() => {
-												$stepInstruction -= 1;
-												$riots1988Mode.progress -= 1;
-											}}
-										/>
-									{/if}
+						{#if $riots1988Mode.progress != $riots1988Mode.data.length}
+							<Footer>
+								<BackMenuBtn />
 
-									{#if $riots1988Mode.progress != $riots1988Mode.data.length}
-										<NextStepBtnApp
-											nextStep={() => {
-												$stepInstruction += 1;
-												$riots1988Mode.progress += 1;
-											}}
-										/>
-									{/if}
-								</div>
-							{/if}
-						</Footer>
+								{#if $selectedMenu == 1}
+									<div class="ml-10 grid h-24 grid-cols-2 gap-x-8 px-4 pb-1">
+										{#if $riots1988Mode.progress > 0}
+											<PrevStepBtnApp
+												prevStep={() => {
+													$stepInstruction -= 1;
+													$riots1988Mode.progress -= 1;
+												}}
+											/>
+										{/if}
+
+										{#if $riots1988Mode.progress != $riots1988Mode.data.length}
+											<NextStepBtnApp
+												nextStep={() => {
+													$stepInstruction += 1;
+													$riots1988Mode.progress += 1;
+												}}
+											/>
+										{/if}
+									</div>
+								{/if}
+							</Footer>
+						{/if}
 					{:else if $selectedPlayMenu == 8}
 						{#if $riots1989Mode.progress < $riots1989Mode.data.length}
 							<ProgressPanel
@@ -425,34 +542,43 @@
 									<ActionCard data={riotAction} />
 								{/if}
 							{/each}
-						{:else}
-							<CongratCard />
+						{:else if !$riots1989Mode.birds}
+							<CongratCard
+								getBirds={() => {
+									$balance += $riots1989Mode.prise;
+									$riots1989Mode.birds = true;
+								}}
+							/>
+						{:else if $riots1989Mode.birds}
+							<PartnersList />
 						{/if}
-						<Footer>
-							<BackMenuBtn />
+						{#if $riots1989Mode.progress != $riots1989Mode.data.length}
+							<Footer>
+								<BackMenuBtn />
 
-							{#if $selectedMenu == 1}
-								<div class="ml-10 grid grid-cols-2 gap-x-8 px-4 h-24 pb-1">
-									{#if $riots1989Mode.progress > 0}
-										<PrevStepBtnApp
-											prevStep={() => {
-												$stepInstruction -= 1;
-												$riots1989Mode.progress -= 1;
-											}}
-										/>
-									{/if}
+								{#if $selectedMenu == 1}
+									<div class="ml-10 grid h-24 grid-cols-2 gap-x-8 px-4 pb-1">
+										{#if $riots1989Mode.progress > 0}
+											<PrevStepBtnApp
+												prevStep={() => {
+													$stepInstruction -= 1;
+													$riots1989Mode.progress -= 1;
+												}}
+											/>
+										{/if}
 
-									{#if $riots1989Mode.progress != $riots1989Mode.data.length}
-										<NextStepBtnApp
-											nextStep={() => {
-												$stepInstruction += 1;
-												$riots1989Mode.progress += 1;
-											}}
-										/>
-									{/if}
-								</div>
-							{/if}
-						</Footer>
+										{#if $riots1989Mode.progress != $riots1989Mode.data.length}
+											<NextStepBtnApp
+												nextStep={() => {
+													$stepInstruction += 1;
+													$riots1989Mode.progress += 1;
+												}}
+											/>
+										{/if}
+									</div>
+								{/if}
+							</Footer>
+						{/if}
 					{:else if $selectedPlayMenu == 9}
 						{#if $riots1990Mode.progress < $riots1990Mode.data.length}
 							<ProgressPanel
@@ -465,34 +591,43 @@
 									<ActionCard data={riotAction} />
 								{/if}
 							{/each}
-						{:else}
-							<CongratCard />
+						{:else if !$riots1990Mode.birds}
+							<CongratCard
+								getBirds={() => {
+									$balance += $riots1990Mode.prise;
+									$riots1990Mode.birds = true;
+								}}
+							/>
+						{:else if $riots1990Mode.birds}
+							<PartnersList />
 						{/if}
-						<Footer>
-							<BackMenuBtn />
+						{#if $riots1990Mode.progress != $riots1990Mode.data.length}
+							<Footer>
+								<BackMenuBtn />
 
-							{#if $selectedMenu == 1}
-								<div class="ml-10 grid grid-cols-2 gap-x-8 px-4 h-24 pb-1">
-									{#if $riots1990Mode.progress > 0}
-										<PrevStepBtnApp
-											prevStep={() => {
-												$stepInstruction -= 1;
-												$riots1990Mode.progress -= 1;
-											}}
-										/>
-									{/if}
+								{#if $selectedMenu == 1}
+									<div class="ml-10 grid h-24 grid-cols-2 gap-x-8 px-4 pb-1">
+										{#if $riots1990Mode.progress > 0}
+											<PrevStepBtnApp
+												prevStep={() => {
+													$stepInstruction -= 1;
+													$riots1990Mode.progress -= 1;
+												}}
+											/>
+										{/if}
 
-									{#if $riots1990Mode.progress != $riots1990Mode.data.length}
-										<NextStepBtnApp
-											nextStep={() => {
-												$stepInstruction += 1;
-												$riots1990Mode.progress += 1;
-											}}
-										/>
-									{/if}
-								</div>
-							{/if}
-						</Footer>
+										{#if $riots1990Mode.progress != $riots1990Mode.data.length}
+											<NextStepBtnApp
+												nextStep={() => {
+													$stepInstruction += 1;
+													$riots1990Mode.progress += 1;
+												}}
+											/>
+										{/if}
+									</div>
+								{/if}
+							</Footer>
+						{/if}
 					{:else if $selectedPlayMenu == 10}
 						{#if $riots1991Mode.progress < $riots1991Mode.data.length}
 							<ProgressPanel
@@ -505,34 +640,43 @@
 									<ActionCard data={riotAction} />
 								{/if}
 							{/each}
-						{:else}
-							<CongratCard />
+						{:else if !$riots1991Mode.birds}
+							<CongratCard
+								getBirds={() => {
+									$balance += $riots1991Mode.prise;
+									$riots1991Mode.birds = true;
+								}}
+							/>
+						{:else if $riots1991Mode.birds}
+							<PartnersList />
 						{/if}
-						<Footer>
-							<BackMenuBtn />
+						{#if $riots1991Mode.progress != $riots1991Mode.data.length}
+							<Footer>
+								<BackMenuBtn />
 
-							{#if $selectedMenu == 1}
-								<div class="ml-10 grid grid-cols-2 gap-x-8 px-4 h-24 pb-1">
-									{#if $riots1991Mode.progress > 0}
-										<PrevStepBtnApp
-											prevStep={() => {
-												$stepInstruction -= 1;
-												$riots1991Mode.progress -= 1;
-											}}
-										/>
-									{/if}
+								{#if $selectedMenu == 1}
+									<div class="ml-10 grid h-24 grid-cols-2 gap-x-8 px-4 pb-1">
+										{#if $riots1991Mode.progress > 0}
+											<PrevStepBtnApp
+												prevStep={() => {
+													$stepInstruction -= 1;
+													$riots1991Mode.progress -= 1;
+												}}
+											/>
+										{/if}
 
-									{#if $riots1991Mode.progress != $riots1991Mode.data.length}
-										<NextStepBtnApp
-											nextStep={() => {
-												$stepInstruction += 1;
-												$riots1991Mode.progress += 1;
-											}}
-										/>
-									{/if}
-								</div>
-							{/if}
-						</Footer>
+										{#if $riots1991Mode.progress != $riots1991Mode.data.length}
+											<NextStepBtnApp
+												nextStep={() => {
+													$stepInstruction += 1;
+													$riots1991Mode.progress += 1;
+												}}
+											/>
+										{/if}
+									</div>
+								{/if}
+							</Footer>
+						{/if}
 					{:else if $selectedPlayMenu == 11}
 						{#if $riots1992Mode.progress < $riots1992Mode.data.length}
 							<ProgressPanel
@@ -545,61 +689,52 @@
 									<ActionCard data={riotAction} />
 								{/if}
 							{/each}
-						{:else}
-							<CongratCard />
+						{:else if !$riots1992Mode.birds}
+							<CongratCard
+								getBirds={() => {
+									$balance += $riots1992Mode.prise;
+									$riots1992Mode.birds = true;
+								}}
+							/>
+						{:else if $riots1992Mode.birds}
+							<PartnersList />
 						{/if}
-						<Footer>
-							<BackMenuBtn />
+						{#if $riots1992Mode.progress != $riots1992Mode.data.length}
+							<Footer>
+								<BackMenuBtn />
 
-							{#if $selectedMenu == 1}
-								<div class="ml-10 grid grid-cols-2 gap-x-8 px-4 h-24 pb-1">
-									{#if $riots1992Mode.progress > 0}
-										<PrevStepBtnApp
-											prevStep={() => {
-												$stepInstruction -= 1;
-												$riots1992Mode.progress -= 1;
-											}}
-										/>
-									{/if}
+								{#if $selectedMenu == 1}
+									<div class="ml-10 grid h-24 grid-cols-2 gap-x-8 px-4 pb-1">
+										{#if $riots1992Mode.progress > 0}
+											<PrevStepBtnApp
+												prevStep={() => {
+													$stepInstruction -= 1;
+													$riots1992Mode.progress -= 1;
+												}}
+											/>
+										{/if}
 
-									{#if $riots1992Mode.progress != $riots1992Mode.data.length}
-										<NextStepBtnApp
-											nextStep={() => {
-												$stepInstruction += 1;
-												$riots1992Mode.progress += 1;
-											}}
-										/>
-									{/if}
-								</div>
-							{/if}
-						</Footer>
+										{#if $riots1992Mode.progress != $riots1992Mode.data.length}
+											<NextStepBtnApp
+												nextStep={() => {
+													$stepInstruction += 1;
+													$riots1992Mode.progress += 1;
+												}}
+											/>
+										{/if}
+									</div>
+								{/if}
+							</Footer>
+						{/if}
 					{/if}
 				{/if}
 			</ActionListScreenApp>
 		{:else if $selectedMenu == 2}
-			<div class="">
-				<div class="mb-10">
-					<div class="max-width-xlarge">
-						<h2 class="heading-style-medium">
-							Nasz sklepik <span class="big-heading heart-dektop"></span>
-						</h2>
-					</div>
-				</div>
+			<div class="h-[74vh] w-full overflow-y-scroll">
+				<Shop />
 
-				<div class=" mb-10 block">
-					<div role="list" class="collection-list-products bestseller">
-						{#each productslIst.promo as product}
-							<ShopCard {product} />
-						{/each}
-						<!-- <slot></slot> -->
-					</div>
-				</div>
-
-				<slot />
+				<!-- <Cart /> -->
 			</div>
-
-			<Cart />
-
 			<Footer>
 				<BackMenuBtn />
 
@@ -614,131 +749,4 @@
 </div>
 
 <style lang="postcss">
-	.heart-dektop {
-		background-image: url(/images/heart_black.svg);
-		background-position: 50%;
-		background-repeat: no-repeat;
-		background-size: auto;
-		min-width: 33px;
-		height: 34px;
-		margin-left: -12px;
-		display: inline-block;
-		position: relative;
-	}
-	.collection-list-products {
-		grid-column-gap: 0;
-		grid-row-gap: 0;
-		grid-template-rows: auto;
-		grid-template-columns: 1fr 1fr 1fr;
-		grid-auto-columns: 1fr;
-		display: grid;
-	}
-	.collection-list-products.bestseller {
-		grid-template-columns: 1fr 1fr 1fr 1fr;
-	}
-	.link-block-product {
-		z-index: 0;
-		background-color: var(--gray);
-		outline-color: var(--black);
-		outline-offset: 0;
-		outline-width: 1px;
-		outline-style: solid;
-		flex-direction: column;
-		justify-content: space-between;
-		width: 100%;
-		height: 100%;
-		text-decoration: none;
-		transition: background-color 0.15s;
-		display: flex;
-		position: relative;
-		overflow: hidden;
-	}
-	.link-block-product:hover {
-		background-color: var(--gray);
-		outline-color: var(--black);
-		outline-offset: 0;
-		outline-width: 1px;
-		outline-style: solid;
-	}
-	.link-block-product:focus-visible {
-		outline-width: 3px;
-	}
-	.link-block-product[data-wf-focus-visible] {
-		outline-width: 3px;
-	}
-	.big-heading {
-		text-transform: uppercase;
-		margin-top: 0;
-		margin-bottom: 0;
-		font-size: 50px;
-		font-weight: 700;
-		line-height: 1.2;
-	}
-	.big-heading.heart-dektop {
-		background-image: url(/images/heart_black.svg);
-		background-position: 50%;
-		background-repeat: no-repeat;
-		background-size: auto;
-		min-width: 33px;
-		height: 34px;
-		margin-left: -12px;
-		display: inline-block;
-		position: relative;
-	}
-	@media screen and (min-width: 992px) {
-		.collection-list-products.bestseller :nth-child(-n + 4) {
-			display: flex;
-		}
-	}
-	@media screen and (min-width: 768px) and (max-width: 991px) {
-		.collection-list-products.bestseller :nth-child(n + 4) {
-			display: none;
-		}
-	}
-	@media screen and (max-width: 767px) {
-		.collection-list-products.bestseller :nth-child(-n + 4) {
-			display: flex;
-		}
-		.collection-list-products.bestseller {
-			grid-template-columns: 1fr 1fr;
-		}
-	}
-	@media screen and (min-width: 1920px) {
-		.big-heading {
-			font-size: 56px;
-		}
-	}
-	@media screen and (max-width: 991px) {
-		.collection-list-products.bestseller {
-			grid-template-columns: 1fr 1fr 1fr;
-		}
-	}
-	@media screen and (max-width: 479px) {
-		.big-heading {
-			line-height: 1.1;
-		}
-		.big-heading.heart-dektop {
-			display: none;
-		}
-	}
-
-	.button-next-slide {
-		cursor: pointer;
-		background-image: url(images/arrow_light.svg);
-		background-position: 50%;
-		background-repeat: no-repeat;
-		background-size: auto;
-		justify-content: center;
-		align-items: center;
-		width: 100%;
-		height: 100%;
-		padding: 1rem;
-		display: flex;
-	}
-	.button-next-slide:hover {
-		background-color: var(--grey);
-	}
-
-	@media screen and (max-width: 991px) {
-	}
 </style>
