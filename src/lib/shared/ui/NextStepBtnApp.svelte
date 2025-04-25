@@ -17,7 +17,7 @@
 <style lang="postcss">
 	.button-next-slide {
 		cursor: pointer;
-		background-image: url(images/arrow_light.svg);
+		background-image: url(images/arrow__light.svg);
 		background-position: 50%;
 		background-repeat: no-repeat;
 		background-size: auto;
