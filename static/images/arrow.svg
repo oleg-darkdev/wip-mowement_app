@@ -3,7 +3,11 @@
 <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 25 23" style="enable-background:new 0 0 25 23;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#1D1D1B;}
+	.st0{fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#000000;stroke-width:2;}
 </style>
-<polygon class="st0" points="0.2,12.4 20.5,12.4 15.2,17.8 15.2,21.2 24.9,11.5 15.2,1.8 15.2,5.1 20.4,10.3 0.2,10.3 "/>
+<g id="Gruppe_81" transform="translate(-256 -565.293)">
+	<path id="Pfad_481" class="st0" d="M270.8,568.4l8.4,8.4l-8.4,8.4"/>
+	<line id="Linie_6" class="st1" x1="256.5" y1="576.8" x2="279.2" y2="576.8"/>
+</g>
 </svg>
