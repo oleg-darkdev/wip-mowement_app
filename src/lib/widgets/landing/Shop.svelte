@@ -5,32 +5,30 @@
 
 <!-- <div id="" class="tab_component w-tabs"> -->
 <!-- <div class="tab_tabs-content w-tab-content"> -->
-<section class="background-color-gray py-10">
-	<div class="padding-global-shop">
-		<div class="container-large">
-			<div class="tab_tab-pane">
-				<div class="mb-10">
-					<div class="max-width-xlarge pl-6">
-						<h2 class="heading-style-medium">
-							Nasz sklepik <span class="big-heading heart-dektop"></span>
-						</h2>
-					</div>
+<div class="padding-global-shop">
+	<div class="container-large">
+		<div class="tab_tab-pane">
+			<div class="mb-10">
+				<div class="max-width-xlarge lg:pl-0 md:pl-0 pl-6">
+					<h2 class="heading-style-medium ">
+						Nasz sklepik <span class="big-heading heart-dektop"></span>
+					</h2>
 				</div>
-
-				<div class=" mb-10 block">
-					<div role="list" class="collection-list-products bestseller">
-						{#each productslIst.promo as product}
-							<ShopCard {product} />
-						{/each}
-						<!-- <slot></slot> -->
-					</div>
-				</div>
-
-				<div class="pl-6"><slot /></div>
 			</div>
+
+			<div class=" mb-10 block">
+				<div role="list" class="collection-list-products bestseller">
+					{#each productslIst.promo as product}
+						<ShopCard {product} />
+					{/each}
+					<!-- <slot></slot> -->
+				</div>
+			</div>
+
+			<!-- <div class="lg:pl-0 md:pl-0 pl-6"><slot /></div> -->
 		</div>
 	</div>
-</section>
+</div>
 
 <!-- </div> -->
 <!-- </div> -->
@@ -127,6 +125,8 @@
 		.big-heading {
 			font-size: 56px;
 		}
+	}
+	@media screen and (min-width: 1020px) {
 		.collection-list-products.bestseller {
 			grid-template-columns: 1fr 1fr 1fr 1fr;
 		}
