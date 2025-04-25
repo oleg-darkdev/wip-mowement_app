@@ -612,7 +612,10 @@ let cities = [
 	belchatow
 ];
 
+const allCitiesCounter = cities.length;
+
 export {
+	allCitiesCounter,
 	machowa,
 	miedzyrzecz,
 	sopot,

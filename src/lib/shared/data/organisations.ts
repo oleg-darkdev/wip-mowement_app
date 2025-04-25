@@ -241,4 +241,20 @@ let worldwideOrgs = [ch77, fpmb, wod, dzzsr];
 
 const allOrgs = [nsz, aro, fmw, rsa, rsz, twe, ch77, fpmb, wod, dzzsr];
 
-export { localOrgs, worldwideOrgs, allOrgs, nsz, aro, fmw, rsa, rsz, twe, ch77, fpmb, wod, dzzsr };
+const allOrgsCounter = allOrgs.length;
+
+export {
+	allOrgsCounter, localOrgs,
+	worldwideOrgs,
+	allOrgs,
+	nsz,
+	aro,
+	fmw,
+	rsa,
+	rsz,
+	twe,
+	ch77,
+	fpmb,
+	wod,
+	dzzsr
+};

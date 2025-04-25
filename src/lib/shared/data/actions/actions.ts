@@ -169,7 +169,11 @@ const allYears = [].concat(
 	records_1992
 );
 
+const allActionsCounter = allYears.length;
+
 export {
+	allActionsCounter,
+	
 	// 1985
 	records_1985,
 	action1,
