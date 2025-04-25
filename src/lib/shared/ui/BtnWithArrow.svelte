@@ -9,7 +9,7 @@
 	<div class="button flex max-w-lg flex-row justify-between">
 		<div class="button-text">Do sklepiku</div>
 
-		<img src="/images/arrow_.svg" loading="lazy" alt="arrow" class="button-arrow white" />
+		<img src="/images/arrow.svg" loading="lazy" alt="arrow" class="button-arrow white" />
 	</div>
 </a>
 
