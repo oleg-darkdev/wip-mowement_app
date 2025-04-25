@@ -30,10 +30,12 @@
 		Header,
 		Footer,
 		ActivistsList,
-		AppPreview
+		AppPreview,
+		Shop,
+		Stats
 	} from '$widgetsLanding';
 
-	import { SummaryActionsCard, SummaryCitiesCard, SummaryOrgsCard } from '$sharedUi';
+	import { SummaryActionsCard, SummaryCitiesCard, SummaryOrgsCard, BtnWithArrow } from '$sharedUi';
 
 	// import { SEO } from '$sharedUtils';
 
@@ -71,6 +73,22 @@
 	</div>
 </section>
 
+<section id="" class="background-color-gray overflow-hidden">
+	<div class="padding-global">
+		<div class="container-large">
+			<div class="padding-section-large">
+				<div class="legal-content_content-wrapper">
+					<div class="margin-bottom">
+						<div class="max-width-xlarge">
+							<h3 class="tab_heading">Informacje o projekcie <br /> w liczbach.</h3>
+						</div>
+					</div>
+					<Stats />
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 <section
 	id="aplikacja"
 	style="
@@ -95,7 +113,19 @@
 	</div>
 </section>
 
-<div id="akcji-oporu" class="background-color-gray">
+<section class="background-color-gray">
+	<div class="padding-global">
+		<div class="container-large">
+			<div class="padding-section-large">
+				<Shop>
+					<BtnWithArrow text="Full " link="/" />
+				</Shop>
+			</div>
+		</div>
+	</div>
+</section>
+
+<div id="akcji-oporu" class="">
 	<div class="padding-section-large">
 		<div class="padding-global">
 			<div class="container-large">
@@ -183,7 +213,7 @@
 
 <SupportUs />
 
-<section id="" class="overflow-hidden">
+<section id="" class="background-color-gray overflow-hidden">
 	<div class="padding-global">
 		<div class="container-large">
 			<div class="padding-section-large">
