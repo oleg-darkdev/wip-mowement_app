@@ -7,13 +7,6 @@
 	};
 </script>
 
-<!-- <button onclick={nextStep} class="button is-icon is-primary is-primary mt-8"
-	><div class="button-text">
-		<img src="images/right.svg" class="h-10 w-10" alt="" />
-	</div>
-	<div class="button-background"></div>
-</button> -->
-
 <div onclick={nextStep} class="banner-next-slide-btn hero-header_info-grid-item">
 	<div class="button-next-slide"></div>
 </div>

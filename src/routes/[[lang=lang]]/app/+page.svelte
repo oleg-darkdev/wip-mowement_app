@@ -60,7 +60,7 @@
 	{#if !$welcomeScreen}
 		<Header />
 	{/if}
-	<main class="flex h-[68vh] flex-col content-center items-center overflow-x-hidden">
+	<main class="flex h-[70vh] flex-col content-center items-center overflow-x-hidden">
 		{#if $selectedMenu == 0}
 			<section class="h-full w-full max-w-2xl overflow-y-hidden">
 				<div class="padding-global h-full w-full">
@@ -74,7 +74,7 @@
 										<ul
 											aria-label="Accordion Control Group Buttons"
 											role="list"
-											class="tab_content-list w-list-unstyled h-[65vh] w-full overflow-y-scroll"
+											class="tab_content-list w-list-unstyled h-[70vh] w-full overflow-y-scroll"
 										>
 											<MenuModeItem mode={$basicMode} />
 											<MenuModeItem mode={$orgsMode} />
@@ -136,7 +136,7 @@
 						<Footer>
 							<BackMenuBtn />
 							{#if $selectedMenu == 1}
-								<div class="ml-10 grid grid-cols-2 gap-x-8 px-4">
+								<div class="ml-10 grid grid-cols-2 gap-x-8 px-4 h-24 pb-1">
 									{#if $basicMode.progress > 0 && $basicMode.progress != $basicMode.data.length}
 										<PrevStepBtnApp
 											prevStep={() => {
@@ -181,7 +181,7 @@
 							<BackMenuBtn />
 
 							{#if $selectedMenu == 1}
-								<div class="ml-10 grid grid-cols-2 gap-x-8 px-4">
+								<div class="ml-10 grid grid-cols-2 gap-x-8 px-4 h-24 pb-1">
 									{#if $orgsMode.progress > 0}
 										<PrevStepBtnApp
 											prevStep={() => {
@@ -226,7 +226,7 @@
 							<BackMenuBtn />
 
 							{#if $selectedMenu == 1}
-								<div class="ml-10 grid grid-cols-2 gap-x-8 px-4">
+								<div class="ml-10 grid grid-cols-2 gap-x-8 px-4 h-24 pb-1">
 									{#if $activistsMode.progress > 0}
 										<PrevStepBtnApp
 											prevStep={() => {
@@ -270,7 +270,7 @@
 						<BackMenuBtn />
 
 						{#if $selectedMenu == 1}
-							<div class="ml-10 grid grid-cols-2 gap-x-8 px-4">
+							<div class="ml-10 grid grid-cols-2 gap-x-8 px-4 h-24 pb-1">
 								{#if $citiesMode.progress > 0}
 									<PrevStepBtnApp
 										prevStep={() => {
@@ -312,7 +312,7 @@
 							<BackMenuBtn />
 
 							{#if $selectedMenu == 1}
-								<div class="ml-10 grid grid-cols-2 gap-x-8 px-4">
+								<div class="ml-10 grid grid-cols-2 gap-x-8 px-4 max-h-24 pb-1">
 									{#if $riots1985Mode.progress > 0}
 										<PrevStepBtnApp
 											prevStep={() => {
@@ -352,7 +352,7 @@
 							<BackMenuBtn />
 
 							{#if $selectedMenu == 1}
-								<div class="ml-10 grid grid-cols-2 gap-x-8 px-4">
+								<div class="ml-10 grid grid-cols-2 gap-x-8 px-4 h-24 pb-1">
 									{#if $riots1987Mode.progress > 0}
 										<PrevStepBtnApp
 											prevStep={() => {
@@ -392,7 +392,7 @@
 							<BackMenuBtn />
 
 							{#if $selectedMenu == 1}
-								<div class="ml-10 grid grid-cols-2 gap-x-8 px-4">
+								<div class="ml-10 grid grid-cols-2 gap-x-8 px-4 h-24 pb-1">
 									{#if $riots1988Mode.progress > 0}
 										<PrevStepBtnApp
 											prevStep={() => {
@@ -432,7 +432,7 @@
 							<BackMenuBtn />
 
 							{#if $selectedMenu == 1}
-								<div class="ml-10 grid grid-cols-2 gap-x-8 px-4">
+								<div class="ml-10 grid grid-cols-2 gap-x-8 px-4 h-24 pb-1">
 									{#if $riots1989Mode.progress > 0}
 										<PrevStepBtnApp
 											prevStep={() => {
@@ -472,7 +472,7 @@
 							<BackMenuBtn />
 
 							{#if $selectedMenu == 1}
-								<div class="ml-10 grid grid-cols-2 gap-x-8 px-4">
+								<div class="ml-10 grid grid-cols-2 gap-x-8 px-4 h-24 pb-1">
 									{#if $riots1990Mode.progress > 0}
 										<PrevStepBtnApp
 											prevStep={() => {
@@ -512,7 +512,7 @@
 							<BackMenuBtn />
 
 							{#if $selectedMenu == 1}
-								<div class="ml-10 grid grid-cols-2 gap-x-8 px-4">
+								<div class="ml-10 grid grid-cols-2 gap-x-8 px-4 h-24 pb-1">
 									{#if $riots1991Mode.progress > 0}
 										<PrevStepBtnApp
 											prevStep={() => {
@@ -552,7 +552,7 @@
 							<BackMenuBtn />
 
 							{#if $selectedMenu == 1}
-								<div class="ml-10 grid grid-cols-2 gap-x-8 px-4">
+								<div class="ml-10 grid grid-cols-2 gap-x-8 px-4 h-24 pb-1">
 									{#if $riots1992Mode.progress > 0}
 										<PrevStepBtnApp
 											prevStep={() => {

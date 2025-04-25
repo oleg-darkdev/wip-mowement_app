@@ -4,28 +4,35 @@
 </script>
 
 <!-- <div id="" class="tab_component w-tabs"> -->
-	<!-- <div class="tab_tabs-content w-tab-content"> -->
-		<div class="tab_tab-pane">
-			<div class="mb-10">
-				<div class="max-width-xlarge">
-					<h2 class="heading-style-medium">
-						Nasz sklepik <span class="big-heading heart-dektop"></span>
-					</h2>
+<!-- <div class="tab_tabs-content w-tab-content"> -->
+<section class="background-color-gray py-10">
+	<div class="padding-global-shop">
+		<div class="container-large">
+			<div class="tab_tab-pane">
+				<div class="mb-10">
+					<div class="max-width-xlarge pl-6">
+						<h2 class="heading-style-medium">
+							Nasz sklepik <span class="big-heading heart-dektop"></span>
+						</h2>
+					</div>
 				</div>
-			</div>
 
-			<div class=" mb-10 block">
-				<div role="list" class="collection-list-products bestseller">
-					{#each productslIst.promo as product}
-						<ShopCard {product} />
-					{/each}
-					<!-- <slot></slot> -->
+				<div class=" mb-10 block">
+					<div role="list" class="collection-list-products bestseller">
+						{#each productslIst.promo as product}
+							<ShopCard {product} />
+						{/each}
+						<!-- <slot></slot> -->
+					</div>
 				</div>
-			</div>
 
-			<slot />
+				<div class="pl-6"><slot /></div>
+			</div>
 		</div>
-	<!-- </div> -->
+	</div>
+</section>
+
+<!-- </div> -->
 <!-- </div> -->
 
 <style lang="postcss">
@@ -44,13 +51,11 @@
 		grid-column-gap: 0;
 		grid-row-gap: 0;
 		grid-template-rows: auto;
-		grid-template-columns: 1fr 1fr 1fr;
+		/* grid-template-columns: 1fr 1fr 1fr; */
 		grid-auto-columns: 1fr;
 		display: grid;
 	}
-	.collection-list-products.bestseller {
-		grid-template-columns: 1fr 1fr 1fr 1fr;
-	}
+
 	.link-block-product {
 		z-index: 0;
 		background-color: var(--gray);
@@ -122,6 +127,9 @@
 		.big-heading {
 			font-size: 56px;
 		}
+		.collection-list-products.bestseller {
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+		}
 	}
 	@media screen and (max-width: 991px) {
 		.collection-list-products.bestseller {
@@ -129,11 +137,19 @@
 		}
 	}
 	@media screen and (max-width: 479px) {
+		.padding-global-shop {
+			padding: 0;
+		}
 		.big-heading {
 			line-height: 1.1;
 		}
 		.big-heading.heart-dektop {
-			display: none;
+			min-width: 20px;
+			height: 26px;
+			margin-left: 4px;
+		}
+		.collection-list-products.bestseller {
+			grid-template-columns: 1fr 1fr;
 		}
 	}
 </style>

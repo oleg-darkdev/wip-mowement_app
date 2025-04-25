@@ -113,17 +113,9 @@
 	</div>
 </section>
 
-<section class="background-color-gray">
-	<div class="padding-global">
-		<div class="container-large">
-			<div class="padding-section-large">
-				<Shop>
-					<BtnWithArrow text="Full " link="/" />
-				</Shop>
-			</div>
-		</div>
-	</div>
-</section>
+<Shop>
+	<BtnWithArrow text="Full " link="/" />
+</Shop>
 
 <div id="akcji-oporu" class="">
 	<div class="padding-section-large">

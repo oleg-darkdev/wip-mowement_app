@@ -4,11 +4,10 @@
 
 <div class="value-wrapper">
 	<div class="value-inner-wrapper">
-		<!-- normal-text has__all-caps -->
 		<span class="text-size-medium uppercase">{stat.title}</span>
 		<!-- <h3 class="tab_heading">{stat.count}</h3> -->
-		 <h2 class="heading-style-medium">{stat.count}</h2>
-		<img src="/images/about_3.jpg" loading="lazy" alt="Schwarze Stecknadel" class="value-image" />
+		<h2 class="heading-style-medium">{stat.count}</h2>
+		<img src="/images/about_3.jpg" loading="lazy" alt="" class="hidden-sm value-image" />
 	</div>
 </div>
 

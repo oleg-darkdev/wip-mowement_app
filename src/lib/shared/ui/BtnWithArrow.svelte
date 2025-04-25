@@ -1,16 +1,12 @@
 <script lang="ts">
-	// import {  } from '$shared';
-	// import {  } from '$widgets';
-	// import {  } from '$entities';
-
 	let { link, text } = $props();
 </script>
 
 <a
 	href="/app"
-	class="std-button black w-inline-block is__bigger max-w-lg  transform transition delay-150 duration-300 ease-in-out hover:translate-x-8"
+	class="std-button black w-inline-block is__bigger max-w-lg transform transition delay-150 duration-300 ease-in-out hover:translate-x-8"
 >
-	<div class="flex button flex-row justify-between max-w-lg">
+	<div class="button flex max-w-lg flex-row justify-between">
 		<div class="button-text">Do sklepiku</div>
 
 		<img src="/images/arrow_.svg" loading="lazy" alt="arrow" class="button-arrow white" />

@@ -1,15 +1,8 @@
 <script lang="ts">
-	import { selectedAppMode, stepInstruction } from '$stores/app';
-
-	// const nextStep = () => {
-	// 	$stepInstruction++;
-	// 	$selectedAppMode.progress++;
-	// };
-
 	let { nextStep } = $props();
 </script>
 
-<button onclick={nextStep} class="button is-icon is-primary mt-8"
+<button onclick={nextStep} class="button is-small is-icon is-primary mt-8"
 	><div class="button-text button-next-slide"></div>
 	<div class="button-background"></div>
 </button>
@@ -17,7 +10,7 @@
 <style lang="postcss">
 	.button-next-slide {
 		cursor: pointer;
-		background-image: url(images/arrow__light.svg);
+		background-image: url(images/arrow_light.svg);
 		background-position: 50%;
 		background-repeat: no-repeat;
 		background-size: auto;
