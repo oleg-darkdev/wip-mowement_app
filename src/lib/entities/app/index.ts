@@ -6,8 +6,19 @@ import AktivistCard from './AktivistCard.svelte';
 import CityCard from './CityCard.svelte';
 import OrgCard from './OrgCard.svelte';
 import MainInfoCard from './MainInfoCard.svelte';
+import PartnersList from './PartnersList.svelte';
+// import MainInfoCard from './MainInfoCard.svelte';
+// import MainInfoCard from './MainInfoCard.svelte';
+// import MainInfoCard from './MainInfoCard.svelte';
+// import MainInfoCard from './MainInfoCard.svelte';
+// import MainInfoCard from './MainInfoCard.svelte';
+// import MainInfoCard from './MainInfoCard.svelte';
+// import MainInfoCard from './MainInfoCard.svelte';
+// import MainInfoCard from './MainInfoCard.svelte';
+// import MainInfoCard from './MainInfoCard.svelte';
 
 export {
+	PartnersList,
 	ActionCard,
 	CityCard,
 	ProgressPanel,
