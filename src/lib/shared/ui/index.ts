@@ -10,7 +10,15 @@ import PlayBtn from './PlayBtn.svelte';
 import ShopBtn from './ShopBtn.svelte';
 import NextStepBtnLanding from './NextStepBtnLanding.svelte';
 import PrevStepBtnLanding from './PrevStepBtnLanding.svelte';
-// import SummaryCitiesCard from './SummaryCitiesCard.svelte';
+import BtnWithArrow from './BtnWithArrow.svelte';
+import StatCard from './StatCard.svelte';
+// import BtnWithArrow from './BtnWithArrow.svelte';
+// import BtnWithArrow from './BtnWithArrow.svelte';
+// import BtnWithArrow from './BtnWithArrow.svelte';
+// import BtnWithArrow from './BtnWithArrow.svelte';
+// import BtnWithArrow from './BtnWithArrow.svelte';
+// import BtnWithArrow from './BtnWithArrow.svelte';
+// import BtnWithArrow from './BtnWithArrow.svelte';
 
 export {
 	Layout,
@@ -24,5 +32,7 @@ export {
 	SummaryActionsMiniCard,
 	PlayBtn,
 	ShopBtn,
-	NextStepBtnLanding
+	NextStepBtnLanding,
+	BtnWithArrow,
+	StatCard
 };

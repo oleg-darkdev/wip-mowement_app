@@ -167,14 +167,20 @@ import {
 	records_1991,
 
 	// 1992
-	records_1992
+	records_1992,
+
+	//
+	allActionsCounter
 } from './actions/actions';
 import navigationNgo from './navigationNgo';
 import partnersList from './partnersList';
 import otherLinks from './navigationOtherLinks';
+import productslIst from './productslIst';
+
 import { activistsList, activistsListApp, activistsListCount } from './activists';
 
 import {
+	allOrgsCounter,
 	localOrgs,
 	worldwideOrgs,
 	allOrgs,
@@ -208,7 +214,8 @@ import {
 	szczecin,
 	rzeszow,
 	kolobrzeg,
-	poznan
+	poznan,
+	allCitiesCounter
 } from './cities';
 // import steps from './steps';
 // import steps from './steps';
@@ -512,7 +519,28 @@ const actionsCounter = [
 	{ text: 1992, count: records_1991.length, id: 8, anchor: '/#akcji-1992' }
 ];
 
+const stats = [
+	{
+		title: 'Miast',
+		count: allCitiesCounter
+	},
+	{
+		title: 'Akcji',
+		count: allActionsCounter
+	},
+	{
+		title: 'Działacze',
+		count: activistsListCount
+	},
+	{
+		title: 'Organizacji',
+		count: allOrgsCounter
+	}
+];
+
 export {
+	allActionsCounter,
+
 	// orgs
 	localOrgs,
 	worldwideOrgs,
@@ -567,5 +595,9 @@ export {
 	goals,
 	activistsList,
 	activistsListApp,
-	activistsListCount
+	activistsListCount,
+	productslIst,
+	stats,
+	allOrgsCounter,
+	allCitiesCounter
 };

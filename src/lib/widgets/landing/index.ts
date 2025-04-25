@@ -11,8 +11,8 @@ import AboutLong from './AboutLong.svelte';
 import Hero from './Hero.svelte';
 import ActivistsList from './ActivistsList.svelte';
 import AppPreview from './AppPreview.svelte';
-// import SupportUs from './SupportUs.svelte';
-// import SupportUs from './SupportUs.svelte';
+import Shop from './Shop.svelte';
+import Stats from './Stats.svelte';
 // import SupportUs from './SupportUs.svelte';
 // import SupportUs from './SupportUs.svelte';
 
@@ -21,6 +21,7 @@ export {
 	SupportUs,
 	OrganisationsList,
 	Mapa,
+	Stats,
 	Footer,
 	AboutShort,
 	RiotsActions,
@@ -30,4 +31,5 @@ export {
 	Hero,
 	ActivistsList,
 	AppPreview,
+	Shop
 };
