@@ -83,7 +83,13 @@
 							<h3 class="tab_heading">Informacje o projekcie <br /> w liczbach.</h3>
 						</div>
 					</div>
-					<Stats />
+					<div id="" class="tab_component w-tabs">
+						<div class="tab_tabs-content w-tab-content">
+							<div class="tab_tab-pane">
+								<Stats />
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -106,7 +112,6 @@
 						</div>
 					</div>
 
-					
 					<AppPreview />
 				</div>
 			</div>
