@@ -8,5 +8,6 @@ import ShopCard from './ShopCard.svelte';
 import PartnersList from './PartnersList.svelte';
 // import BoardgameCard from './BoardgameCard.svelte';
 // import BoardgameCard from './BoardgameCard.svelte';
+import StatCard from './StatCard.svelte';
 
-export { FaqCard, DateCard, OrgCard, CityCard, AktivistCard, ShopCard, PartnersList };
+export { FaqCard, StatCard, DateCard, OrgCard, CityCard, AktivistCard, ShopCard, PartnersList };

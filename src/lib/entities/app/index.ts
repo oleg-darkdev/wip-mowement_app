@@ -7,7 +7,7 @@ import CityCard from './CityCard.svelte';
 import OrgCard from './OrgCard.svelte';
 import MainInfoCard from './MainInfoCard.svelte';
 import PartnersList from './PartnersList.svelte';
-// import MainInfoCard from './MainInfoCard.svelte';
+import StatCard from './StatCard.svelte';
 // import MainInfoCard from './MainInfoCard.svelte';
 // import MainInfoCard from './MainInfoCard.svelte';
 // import MainInfoCard from './MainInfoCard.svelte';
@@ -26,5 +26,6 @@ export {
 	MainInfoCard,
 	AktivistCard,
 	MenuModeItem,
-	CongratCard
+	CongratCard,
+	StatCard
 };

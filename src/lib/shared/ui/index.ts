@@ -11,7 +11,6 @@ import ShopBtn from './ShopBtn.svelte';
 import NextStepBtnLanding from './NextStepBtnLanding.svelte';
 import PrevStepBtnLanding from './PrevStepBtnLanding.svelte';
 import BtnWithArrow from './BtnWithArrow.svelte';
-import StatCard from './StatCard.svelte';
 // import BtnWithArrow from './BtnWithArrow.svelte';
 // import BtnWithArrow from './BtnWithArrow.svelte';
 // import BtnWithArrow from './BtnWithArrow.svelte';
@@ -33,6 +32,5 @@ export {
 	PlayBtn,
 	ShopBtn,
 	NextStepBtnLanding,
-	BtnWithArrow,
-	StatCard
+	BtnWithArrow
 };
