@@ -72,6 +72,7 @@
 							<div class="container-large h-full w-full overflow-y-hidden">
 								{#if $welcomeScreen}
 									<WelcomeScreen />
+									
 								{:else}
 									<div class="" transition:slide>
 										<ul
@@ -730,7 +731,7 @@
 				{/if}
 			</ActionListScreenApp>
 		{:else if $selectedMenu == 2}
-			<div class="h-[74vh] w-full overflow-y-scroll">
+			<div transition:slide class="h-[74vh] w-full overflow-y-scroll">
 				<Shop />
 
 				<!-- <Cart /> -->

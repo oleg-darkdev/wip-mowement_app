@@ -14,7 +14,7 @@
 			</div>
 			<div class="tab_item-content">
 				<div>
-					<span class="hidden-sm mr-2"> progres </span><strong>{progress}</strong> /
+					<span class="hidden-sm mr-2"> progres </span><strong class=''>{progress}</strong> /
 					<span>{finalStep}</span>
 				</div>
 			</div>
