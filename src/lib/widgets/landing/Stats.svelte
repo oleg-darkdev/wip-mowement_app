@@ -1,21 +1,13 @@
 <script lang="ts">
-	import { StatCard } from '$sharedUi';
+	import { StatCard } from '$entitiesLanding';
 	import { stats } from '$sharedData';
 	// import {  } from '$entities'
-
-	
 </script>
 
-<div id="" class="tab_component w-tabs">
-	<div class="tab_tabs-content w-tab-content">
-		<div class="tab_tab-pane">
-			<div class="kr-m-values-layout">
-				{#each stats as stat}
-					<StatCard {stat} />
-				{/each}
-			</div>
-		</div>
-	</div>
+<div class="kr-m-values-layout">
+	{#each stats as stat}
+		<StatCard {stat} />
+	{/each}
 </div>
 
 <style lang="postcss">

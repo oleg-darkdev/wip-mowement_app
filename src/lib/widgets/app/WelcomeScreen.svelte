@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { slide } from 'svelte/transition';
+	import { StatCard } from '$entitiesApp';
+	import { stats } from '$sharedData';
 
 	import { welcomeScreen } from '$stores/app';
 </script>
@@ -29,6 +31,12 @@
 		</span>
 	</p>
 
+	<div class="kr-m-values-layout">
+		{#each stats as stat}
+			<StatCard {stat} />
+		{/each}
+	</div>
+
 	<div class="grid grid-cols-2 gap-x-8 px-4">
 		<a href="/" target="_blank" class="button is-secondary"
 			><div class="button-text">Główna</div>
@@ -43,6 +51,33 @@
 </div>
 
 <style lang="postcss">
+	.kr-m-values-layout {
+		grid-column-gap: 16px;
+		grid-row-gap: 16px;
+		grid-template-rows: auto;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-auto-columns: 1fr;
+		align-items: start;
+		display: grid;
+	}
+
+	@media screen and (max-width: 767px) {
+		.kr-m-values-layout {
+			grid-template-rows: auto auto;
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+
+	@media screen and (max-width: 479px) {
+		.kr-m-values-layout {
+			grid-column-gap: 0px;
+			grid-row-gap: 0px;
+			grid-template-rows: auto auto;
+			grid-template-columns: 1fr 1fr;
+			margin-right: -1px;
+		}
+	}
+
 	.button-next-slide {
 		cursor: pointer;
 		background-image: url(images/arrow_light.svg);
