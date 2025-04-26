@@ -3,13 +3,14 @@
 	let { getBirds } = $props();
 </script>
 
+<!-- max-h-64 h-20 -->
 <div transition:slide class="h-full w-full">
 	<div
 		onclick={getBirds}
-		class="margin-bottom margin-small flex h-full flex-col content-center items-center justify-center"
+		class="margin-bottom margin-small flex  h-full animate-pulse flex-col content-center items-center justify-center"
 	>
 		<h3
-			class="tab_heading mb-10 flex flex-col content-center items-center justify-center text-center"
+			class="tab_heading mb-6 flex flex-col content-center items-center justify-center text-center"
 		>
 			Odebrać
 		</h3>

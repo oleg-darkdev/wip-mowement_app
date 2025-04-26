@@ -3,21 +3,49 @@
 
 	import { partnersList } from '$sharedData';
 	import { selectedMenu } from '$stores/app';
-
-	// import {  } from '$shared';
-	// import {  } from '$widgets';
-	// import {  } from '$entities'
 </script>
 
 <div transition:slide class="h-full w-full">
 	<div
 		class="margin-bottom margin-small flex h-full flex-col content-center items-center justify-center"
 	>
-		<h3
-			class="tab_heading mb-10 flex flex-col content-center items-center justify-center text-center"
-		>
-			Misja zakończona, <br /> gołębie zostały dodane do skarbonki
-		</h3>
+		<div class="grid h-dvh place-items-center antialiased">
+			<div
+				class="group w-full max-w-[620px] border border-2 border-[--black] bg-[#FCFCFC] p-14 text-center transition duration-500 hover:bg-[#F5F5F5] hover:duration-200"
+			>
+				<div class="isolate flex justify-center">
+					<div
+						class="relative left-2.5 top-1.5 grid size-12 -rotate-6 place-items-center rounded-xl bg-white shadow shadow-lg ring-1 ring-black/[0.08] transition duration-500 group-hover:-translate-x-5 group-hover:-translate-y-0.5 group-hover:-rotate-12 group-hover:duration-200"
+					>
+						<img src="/images/dove-icon_black.svg" class="h-10 w-10" alt="" />
+					</div>
+					<div
+						class="z-10 grid size-12 place-items-center rounded-xl bg-white shadow-lg ring-1 ring-black/[0.08] transition duration-500 group-hover:-translate-y-0.5 group-hover:duration-200"
+					>
+						<img src="/images/dove-icon_black.svg" class="h-10 w-10" alt="" />
+					</div>
+					<div
+						class="relative right-2.5 top-1.5 grid size-12 rotate-6 place-items-center rounded-xl bg-white shadow-lg ring-1 ring-black/[0.08] transition duration-500 group-hover:-translate-y-0.5 group-hover:translate-x-5 group-hover:rotate-12 group-hover:duration-200"
+					>
+						<img src="/images/dove-icon_black.svg" class="h-10 w-10" alt="" />
+					</div>
+				</div>
+				<h2 class="mt-6 text-base font-medium text-[#212121]">Misja zakończona</h2>
+				<p class="mt-1 text-sm text-[#666666]">Gołębie zostały dodane do skarbonki</p>
+
+				<div class="mt-6 flex w-full max-w-sm flex-row justify-around">
+					<button onclick={() => ($selectedMenu = 0)} class="button is-secondary"
+						><div class="button-text">Menu</div>
+						<div class="button-background"></div>
+					</button>
+
+					<button onclick={() => ($selectedMenu = 2)} class="button is-secondary"
+						><div class="button-text">Sklepik</div>
+						<div class="button-background"></div>
+					</button>
+				</div>
+			</div>
+		</div>
 
 		<div class="margin-bottom margin-xxlarge">
 			<div class="partners-logos">
@@ -28,18 +56,6 @@
 					</a>
 				{/each}
 			</div>
-		</div>
-
-		<div class="flex w-full max-w-sm flex-row justify-around">
-			<button onclick={() => ($selectedMenu = 0)} class="button is-secondary"
-				><div class="button-text">Menu</div>
-				<div class="button-background"></div>
-			</button>
-
-			<button onclick={() => ($selectedMenu = 2)} class="button is-secondary"
-				><div class="button-text">Sklepik</div>
-				<div class="button-background"></div>
-			</button>
 		</div>
 	</div>
 </div>
